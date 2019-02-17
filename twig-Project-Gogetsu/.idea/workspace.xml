@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -562,12 +560,12 @@
       <workItem from="1550234903340" duration="13648000" />
       <workItem from="1550254612990" duration="5142000" />
       <workItem from="1550416636264" duration="2657000" />
-      <workItem from="1550419793017" duration="612000" />
+      <workItem from="1550419793017" duration="1168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152457000" />
+    <option name="totallyTimeSpent" value="153013000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -592,7 +590,7 @@
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.1295082" />
+      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.12929623" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
