@@ -1,0 +1,12 @@
+.split-pane:horizontal > .split-pane-divider{
+    -fx-background-color: yellow;
+}
+.split-pane:vertical > .split-pane-divider{
+    -fx-background-color: yellow;
+}
+.note{
+    -fx-background-image: url('../../image/blue.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-text-alignment: center;
+}

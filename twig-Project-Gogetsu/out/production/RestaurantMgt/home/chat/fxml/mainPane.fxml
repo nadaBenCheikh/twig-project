@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" stylesheets="@../style/arrows.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.chat.Controllers.mainPaneController">
+   <children>
+      <TextField layoutX="590.0" layoutY="47.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+      <Label layoutX="57.0" layoutY="25.0" text="Coworking Space " textFill="#e7e5e5">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="50.0" prefWidth="661.0" spacing="50.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="22000" textFill="#2a73ff">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label text="Total Orders" textFill="#e7e5e5" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="1500" textFill="#26bfbc">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label text="Total delivered" textFill="#e7e5e5" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="1000" textFill="#fa5f7e">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label text="Peding Orders" textFill="#e7e5e5" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="780" textFill="#de0000">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label text="Orders on Hold" textFill="#e7e5e5" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ScrollPane layoutX="50.0" layoutY="183.0" prefHeight="320.0" prefWidth="692.0" stylesheets="@../../style.css">
+         <content>
+            <VBox fx:id="pnItems" prefHeight="318.0" prefWidth="744.0" spacing="5.0" style="-fx-background-color: #02030A;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="749.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/icons8_Search_52px.png" />
+         </image>
+      </ImageView>
+      <VBox fx:id="sendBox" layoutX="30.0" layoutY="511.0" prefHeight="35.0" prefWidth="712.0">
+         <children>
+            <HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="695.0" spacing="80.0" style="-fx-background-color: #02030A; -fx-background-radius: 5; -fx-background-insets: 0;">
+               <children>
+                  <FontAwesomeIcon fill="#3411f8" glyphStyle="FontAwesomeIcon" iconName="USER" size="2em">
+                     <HBox.margin>
+                        <Insets left="20.0" right="-50.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <TextField fx:id="textTosend" prefHeight="25.0" prefWidth="525.0" promptText="type your message here" />
+                  <Button fx:id="send" mnemonicParsing="false" onAction="#sendButton" prefHeight="10.0" prefWidth="60.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../../style.css" text="send">
+                     <HBox.margin>
+                        <Insets left="-50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+               </effect>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="66.0" layoutY="124.0" prefHeight="50.0" prefWidth="650.0" spacing="50.0">
+         <children>
+            <Label text="Chat Room" textFill="#e7e5e5">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button fx:id="leftPane" layoutX="34.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: #02030A;" styleClass="Arrow">
+         <graphic>
+            <FontAwesomeIcon fill="#690000" glyphStyle="FontAwesomeIcon" iconName="ARROW_LEFT" size="3em" />
+         </graphic>
+      </Button>
+      <Button fx:id="rightPane" layoutX="710.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: #02030A;" stylesheets="@../../style.css">
+         <graphic>
+            <FontAwesomeIcon fill="#15006b" glyphStyle="FontAwesomeIcon" iconName="ARROW_RIGHT" size="3em" />
+         </graphic>
+      </Button>
+   </children>
+</Pane>

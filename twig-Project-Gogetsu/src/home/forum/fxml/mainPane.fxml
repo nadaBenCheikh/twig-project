@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.forum.Controllers.mainPaneController">
+   <children>
+      <Pane fx:id="pnlCustomer11" layoutX="10.0" layoutY="10.0" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" />
+      <Pane fx:id="pnlCustomer1" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+         <children>
+            <TextField layoutX="555.0" layoutY="57.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+            <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="712.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/icons8_Search_52px.png" />
+               </image>
+            </ImageView>
+            <ChoiceBox layoutX="555.0" layoutY="96.0" prefHeight="25.0" prefWidth="183.0" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+            <TableView fx:id="tableView" layoutX="34.0" layoutY="145.0" onMouseClicked="#clickItem" prefHeight="385.0" prefWidth="726.0">
+               <columns>
+                  <TableColumn fx:id="category" prefWidth="89.0" resizable="false" text="category" />
+                  <TableColumn fx:id="subject" prefWidth="98.0" resizable="false" text="subject" />
+                  <TableColumn fx:id="description" prefWidth="374.0" resizable="false" text="description" />
+                  <TableColumn fx:id="postedOn" prefWidth="149.0" resizable="false" text="postedOn" />
+               </columns>
+            </TableView>
+            <Label layoutX="64.0" layoutY="14.0" text="forum subjects  " textFill="#e7e5e5">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

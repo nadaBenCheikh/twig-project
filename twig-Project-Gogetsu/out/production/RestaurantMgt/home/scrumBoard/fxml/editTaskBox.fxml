@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.scrumBoard.Controllers.scrumEditController">
+   <children>
+      <VBox layoutY="8.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox fx:id="itemC2" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="597.0" spacing="80.0" style="-fx-background-color: #02030A; -fx-background-radius: 5; -fx-background-insets: 0;">
+               <children>
+                  <FontAwesomeIcon fill="#ff0404" iconName="PLUS_CIRCLE" size="3em" />
+                  <Label text="edit TasK" textFill="#b7c3d7">
+                     <HBox.margin>
+                        <Insets left="-30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+               </effect>
+            </HBox>
+            <HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="597.0" spacing="80.0" style="-fx-background-color: #02030A; -fx-background-radius: 5; -fx-background-insets: 0;">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/icons8_GPS_Antenna_64px_1.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Title" textFill="#b7c3d7">
+                     <HBox.margin>
+                        <Insets left="-20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="title" prefHeight="25.0" prefWidth="300.0" />
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+               </effect>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="itemC1" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="597.0" spacing="80.0" style="-fx-background-color: #02030A; -fx-background-radius: 5; -fx-background-insets: 0;">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/icons8_GPS_Antenna_64px_1.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Description" textFill="#b7c3d7">
+                     <HBox.margin>
+                        <Insets left="-20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+               </effect>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="217.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="description" prefHeight="153.0" prefWidth="466.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="editButton" onAction="#editTak" prefHeight="37.0" prefWidth="69.0" ripplerFill="WHITE" style="-fx-background-color: #FF0404;" text="Edit" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="deleteButton" onAction="#deleteTak" prefHeight="37.0" prefWidth="69.0" ripplerFill="WHITE" style="-fx-background-color: #0078D7;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="cancelButton" onAction="#cancel" prefHeight="37.0" prefWidth="69.0" ripplerFill="WHITE" style="-fx-background-color: #41CD52;" text="cancel" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.scrumBoard.Controllers.mainPaneController">
+   <children>
+      <Pane fx:id="pnlMenus" prefHeight="589.0" prefWidth="796.0" style="-fx-background-color: #02030A;" stylesheets="@../style/skrum.css">
+         <children>
+            <SplitPane dividerPositions="0.3238095238095238, 0.6914285714285714" layoutX="-2.0" layoutY="93.0" prefHeight="482.0" prefWidth="793.0" style="-fx-background-color: #02030A;" styleClass="divider">
+               <items>
+                  <ScrollPane prefHeight="480.0" prefWidth="253.0" style="-fx-background-color: #02030A;">
+                     <content>
+                        <VBox fx:id="pnItems1" prefHeight="480.0" prefWidth="253.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="45.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="199.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+               </items>
+            </SplitPane>
+            <Label layoutX="22.0" layoutY="14.0" text=" scrum board" textFill="#e7e5e5">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="70.0" layoutY="57.0" text="To Do" textFill="#2a73ff">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="366.0" layoutY="57.0" text="Doing" textFill="#2a73ff">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="643.0" layoutY="57.0" text="Done" textFill="#2a73ff">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="addNoteButton" layoutX="582.0" layoutY="13.0" onAction="#addModal" prefHeight="37.0" prefWidth="69.0" ripplerFill="WHITE" style="-fx-background-color: #FF0404;" text="Add" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="708.0" layoutY="13.0" ripplerFill="WHITE" style="-fx-background-color: #2A73FF;" text="Empty" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIcon fill="#ff0404" iconName="PLUS_CIRCLE" layoutX="537.0" layoutY="44.0" size="3em" />
+            <FontAwesomeIcon fill="#2a73ff" iconName="RECYCLE" layoutX="664.0" layoutY="44.0" size="3em" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

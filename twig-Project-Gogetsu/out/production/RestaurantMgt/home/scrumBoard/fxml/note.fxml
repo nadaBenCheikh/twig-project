@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="anchor" prefHeight="92.0" prefWidth="85.0" style="-fx-background-color: #02030A;" stylesheets="@../style/skrum.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.scrumBoard.Controllers.scrumController">
+   <children>
+      <Label alignment="CENTER" layoutX="13.0" layoutY="13.0" prefHeight="109.0" prefWidth="120.0" styleClass="note" text="CRUD" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="noteButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#editAction" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: transparent;" />
+   </children>
+</AnchorPane>
