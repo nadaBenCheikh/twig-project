@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.inscriptionController">
+   <children>
+      <Label layoutX="280.0" layoutY="150.0" prefHeight="30.0" prefWidth="97.0" text="Sign up" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font></Label>
+      <Label layoutX="280.0" layoutY="193.0" text="you are?" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font></Label>
+      <Button fx:id="entreprise" layoutX="230.0" layoutY="270.0" mnemonicParsing="false" onAction="#inscriredonneur" prefHeight="25.0" prefWidth="179.0" text="Donneur d'ordre/Entreprise" />
+      <Button fx:id="freelancer" layoutX="270.0" layoutY="317.0" mnemonicParsing="false" onAction="#inscrirefreelancer" prefHeight="25.0" prefWidth="97.0" text="Freelance" />
+   </children>
+</Pane>
