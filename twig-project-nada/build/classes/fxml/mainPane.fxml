@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterProjet">
+   <children>
+      <Button fx:id="ajouter" layoutX="347.0" layoutY="386.0" mnemonicParsing="false" onAction="#add" opacity="0.07" prefHeight="91.0" prefWidth="131.0" textAlignment="CENTER" textFill="#232324" textOverrun="CLIP" />
+      <Label layoutX="114.0" layoutY="120.0" prefHeight="36.0" prefWidth="94.0" text="Title" textFill="#db3907">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Label layoutX="114.0" layoutY="170.0" text="Description" textFill="#db3907">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Label layoutX="114.0" layoutY="220.0" text="Location" textFill="#db3907">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Label layoutX="114.0" layoutY="270.0" text="Category" textFill="#db3907">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Label layoutX="114.0" layoutY="320.0" prefHeight="31.0" prefWidth="300.0" text="Termination Date" textFill="#db3907">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <TextField fx:id="txtTitle" layoutX="253.0" layoutY="120.0" />
+      <DatePicker fx:id="DatePickerTermination" layoutX="280.0" layoutY="320.0" />
+      <TextField fx:id="txtLocation" layoutX="253.0" layoutY="220.0" />
+      <TextField fx:id="txtCategory" layoutX="253.0" layoutY="270.0" />
+      <ImageView fitHeight="63.0" fitWidth="92.0" layoutX="368.0" layoutY="399.0">
+         <image>
+            <Image url="@image/add.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="115.0" layoutY="28.0" prefHeight="69.0" prefWidth="277.0" text="Create a new Project" textFill="#ab991a">
+         <font>
+            <Font name="Britannic Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtDescription" layoutX="253.0" layoutY="170.0" prefHeight="25.0" prefWidth="149.0" />
+   </children>
+</Pane>
