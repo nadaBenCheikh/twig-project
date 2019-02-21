@@ -52,11 +52,11 @@ public class ProjectsService implements Iservices<Projects>{
     }
 
     @Override
-    public void delete(Projects t) {
+    public void delete(int x) {
         String requete="delete from projects where id=?";
         try {
            pst= connexion.getCnx().prepareStatement(requete);
-           pst.setInt(1, t.getId());
+           pst.setInt(1, x);
            pst.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(ProjectsService.class.getName()).log(Level.SEVERE, null, ex);
@@ -65,7 +65,7 @@ public class ProjectsService implements Iservices<Projects>{
 
     @Override
     public void update(Projects t) {
-        String requete="UPDATE projects SET title=?, description=?, location=?, category=?, terminationDate=?, status=? WHERE id=?";
+        String requete="UPDATE projects SET title=?, description=?, location=?, category=?, terminationDate=? WHERE id=?";
         try {
             pst=connexion.getCnx().prepareStatement(requete);
             pst.setString(1, t.getTitle());
@@ -73,8 +73,7 @@ public class ProjectsService implements Iservices<Projects>{
             pst.setString(3, t.getLocation());
             pst.setString(4, t.getCategory());
             pst.setDate(5, t.getTerminationDate());
-            pst.setString(6, t.getStatus());
-            pst.setInt(7, t.getId());
+            pst.setInt(6, t.getId());
             pst.executeUpdate(); 
         } catch (SQLException ex) {
             Logger.getLogger(ProjectsService.class.getName()).log(Level.SEVERE, null, ex);
@@ -132,22 +131,22 @@ public class ProjectsService implements Iservices<Projects>{
         return list;
     }
     
-    public void state(Projects t){
+    public void state(int x){
         String requete1="UPDATE projects SET status=? where id=?";
-        String requete2="delete from tasks where projectId=?";
-        String requete3="update colabs set state=? where projectId=?";
+        //String requete2="delete from tasks where projectId=?";
+        //String requete3="update colabs set state=? where projectId=?";
         try {
             pst=connexion.getCnx().prepareStatement(requete1);
-            pst1=connexion.getCnx().prepareStatement(requete2);
-            pst2=connexion.getCnx().prepareStatement(requete3);
+            //pst1=connexion.getCnx().prepareStatement(requete2);
+            //pst2=connexion.getCnx().prepareStatement(requete3);
             pst.setString(1, "completed");
-            pst.setInt(2, t.getId());
-            pst1.setInt(1, t.getId());
-            pst2.setString(1, "finishedWork");
-            pst2.setInt(2, t.getId());
+            pst.setInt(2, x);
+            //pst1.setInt(1, t.getId());
+            //pst2.setString(1, "finishedWork");
+            //pst2.setInt(2, t.getId());
             pst.executeUpdate();
-            pst1.executeUpdate();
-            pst2.executeUpdate();
+            //pst1.executeUpdate();
+           // pst2.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(ProjectsService.class.getName()).log(Level.SEVERE, null, ex);
         }

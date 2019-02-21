@@ -14,6 +14,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javax.swing.JOptionPane;
 import services.ProjectsService;
 
 public class AjouterProjet {
@@ -43,8 +44,9 @@ public class AjouterProjet {
     void add(ActionEvent event) {
         ProjectsService pservice=new ProjectsService();
         Date d=Date.valueOf(DatePickerTermination.getValue());
-        pservice.isert(new Projects(txtTitle.getText(),txtDescription.getText(),txtLocation.getText(),txtCategory.getText(),d,3));
+        pservice.isert(new Projects(txtTitle.getText(),txtDescription.getText(),txtLocation.getText(),txtCategory.getText(),d,2));
         System.out.println("c bonnn");
+        JOptionPane.showMessageDialog(null, "Project is successfully add", "Add Project", JOptionPane.PLAIN_MESSAGE);
         ////user.getInstance()   session->user id
     }
 

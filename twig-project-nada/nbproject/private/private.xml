@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/esprit/Documents/NetBeansProjects/pi_1.0/src/entities/Projects.java</file>
             <file>file:/C:/Users/esprit/Documents/NetBeansProjects/pi_1.0/src/services/ProjectsService.java</file>
             <file>file:/C:/Users/esprit/Documents/NetBeansProjects/pi_1.0/src/controllers/NewFXMain.java</file>
-            <file>file:/C:/Users/esprit/Documents/NetBeansProjects/pi_1.0/src/services/OffersService.java</file>
-            <file>file:/C:/Users/esprit/Documents/NetBeansProjects/pi_1.0/src/controllers/AjouterTache.java</file>
+            <file>file:/C:/Users/esprit/Documents/NetBeansProjects/pi_1.0/src/controllers/afficherAllProjects_back.java</file>
         </group>
     </open-files>
 </project-private>

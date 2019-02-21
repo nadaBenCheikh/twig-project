@@ -44,11 +44,11 @@ public class TasksService implements Iservices<Tasks>{
     }
 
     @Override
-    public void delete(Tasks t) {
+    public void delete(int x) {
         String requete="delete from tasks where id=?";
         try {
             pst=connexion.getCnx().prepareStatement(requete);
-            pst.setInt(1, t.getId());
+            pst.setInt(1, x);
             pst.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(TasksService.class.getName()).log(Level.SEVERE, null, ex);
@@ -95,16 +95,16 @@ public class TasksService implements Iservices<Tasks>{
         return t;
     }
     
-    //Afficher tous les projets et leurs taches s’ils existes d’un donneur d’ordre
+    //Afficher tous les projets et leurs taches s’ils existes d’un donneur d’ordre  ///!!!!!!!statusss
     public List<ProjectJoinTasks> displayAllProjectsAndTasks(int x){ 
-        String requete="SELECT p.title,p.description,p.creationDate,p.terminationDate,p.location,p.category,t.title,t.description from projects p left join tasks t on p.id=t.projectId where p.ownerId=?";
+        String requete="SELECT p.id,p.title,p.description,p.creationDate,p.terminationDate,p.location,p.category,p.status,t.id,t.title,t.description from projects p left join tasks t on p.id=t.projectId where p.ownerId=?";
         List<ProjectJoinTasks> list=new ArrayList<>();
         try {
         pst=connexion.getCnx().prepareStatement(requete);
         pst.setInt(1, x);
         rst=pst.executeQuery();
         while(rst.next()){
-            list.add(new ProjectJoinTasks(rst.getString(1),rst.getString(2),rst.getDate(3),rst.getDate(4),rst.getString(5),rst.getString(6),rst.getString(7),rst.getString(8)));
+            list.add(new ProjectJoinTasks(rst.getInt(1),rst.getString(2),rst.getString(3),rst.getDate(4),rst.getDate(5),rst.getString(6),rst.getString(7),rst.getString(8),rst.getInt(9),rst.getString(10),rst.getString(11)));
         }
         } catch (SQLException ex) {
             Logger.getLogger(TasksService.class.getName()).log(Level.SEVERE, null, ex);
@@ -112,5 +112,21 @@ public class TasksService implements Iservices<Tasks>{
         return list;
     }
     
+        //Afficher tous les projets et leurs taches s’ils existes de tous les donneurs
+    public List<ProjectJoinTasks> displayAllProjectsAndTasksAllDonneur(){ 
+        String requete="SELECT p.id,p.title,p.description,p.creationDate,p.terminationDate,p.location,p.category,p.status,t.id,t.title,t.description from projects p left join tasks t on p.id=t.projectId where p.status=?";
+        List<ProjectJoinTasks> list=new ArrayList<>();
+        try {
+        pst=connexion.getCnx().prepareStatement(requete);
+        pst.setString(1, "available");
+        rst=pst.executeQuery();
+        while(rst.next()){
+            list.add(new ProjectJoinTasks(rst.getInt(1),rst.getString(2),rst.getString(3),rst.getDate(4),rst.getDate(5),rst.getString(6),rst.getString(7),rst.getString(8),rst.getInt(9),rst.getString(10),rst.getString(11)));
+        }
+        } catch (SQLException ex) {
+            Logger.getLogger(TasksService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
+    }
     
 }

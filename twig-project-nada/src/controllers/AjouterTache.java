@@ -14,13 +14,14 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javax.swing.JOptionPane;
 import services.ProjectsService;
 import services.TasksService;
 
 public class AjouterTache{
     
     ProjectsService pservice=new ProjectsService();
-        ArrayList <Projects> list=(ArrayList <Projects>) pservice.displayAllProject(3);
+        ArrayList <Projects> list=(ArrayList <Projects>) pservice.displayAllProject(2);
         
         Map<String, Integer> op=list.stream().collect(Collectors.toMap(Projects::getTitle, Projects::getId, (a,b)->a+b));
         ObservableList<String> options=FXCollections.observableArrayList(op.keySet());
@@ -55,6 +56,7 @@ public class AjouterTache{
         TasksService tservice= new TasksService();
         tservice.isert(new Tasks(s, txtTitle.getText(), txtDescription.getText()));
         System.out.println("c bonnnnnnnn");
+        JOptionPane.showMessageDialog(null, "Project is successfully add", "Add Project", JOptionPane.PLAIN_MESSAGE);
     }   
     
 
