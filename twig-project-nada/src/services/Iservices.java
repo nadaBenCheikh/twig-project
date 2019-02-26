@@ -16,5 +16,5 @@ public interface Iservices<T> {
     void delete(int x);
     void update(T t);
     List<T> displayAllProjects(int x);
-    T getById(T t);
+    T getById(int x);
 }

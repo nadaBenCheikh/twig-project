@@ -67,7 +67,7 @@ public class OffersService implements Iservices<Offers>{
     }
     
     @Override
-    public Offers getById(Offers t) {
+    public Offers getById(int x) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

@@ -90,7 +90,8 @@ public class TasksService implements Iservices<Tasks>{
     }
 
     @Override
-    public Tasks getById(Tasks t) {
+    public Tasks getById(int x) {
+        Tasks t=new Tasks();
         System.out.println("cest pas necessaire pour une tache");
         return t;
     }
@@ -112,13 +113,31 @@ public class TasksService implements Iservices<Tasks>{
         return list;
     }
     
-        //Afficher tous les projets et leurs taches s’ils existes de tous les donneurs
-    public List<ProjectJoinTasks> displayAllProjectsAndTasksAllDonneur(){ 
-        String requete="SELECT p.id,p.title,p.description,p.creationDate,p.terminationDate,p.location,p.category,p.status,t.id,t.title,t.description from projects p left join tasks t on p.id=t.projectId where p.status=?";
+    //Afficher un projet et ses taches si elles existes 
+    public List<ProjectJoinTasks> displayAllProjectsAndTasksAllDonneur(int x){ 
+        String requete="SELECT p.id,p.title,p.description,p.creationDate,p.terminationDate,p.location,p.category,p.status,t.id,t.title,t.description from projects p left join tasks t on p.id=t.projectId where p.id=?";
         List<ProjectJoinTasks> list=new ArrayList<>();
         try {
         pst=connexion.getCnx().prepareStatement(requete);
-        pst.setString(1, "available");
+        pst.setInt(1, x);
+        rst=pst.executeQuery();
+        while(rst.next()){
+            list.add(new ProjectJoinTasks(rst.getInt(1),rst.getString(2),rst.getString(3),rst.getDate(4),rst.getDate(5),rst.getString(6),rst.getString(7),rst.getString(8),rst.getInt(9),rst.getString(10),rst.getString(11)));
+        }
+        } catch (SQLException ex) {
+            Logger.getLogger(TasksService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
+    }
+    
+    //rechercheee
+    public List<ProjectJoinTasks> displayAllProjectsAndTasksPerTitle(int x,String title){ 
+        String requete="SELECT p.id,p.title,p.description,p.creationDate,p.terminationDate,p.location,p.category,p.status,t.id,t.title,t.description from projects p left join tasks t on p.id=t.projectId where p.ownerId=? and p.title=?";
+        List<ProjectJoinTasks> list=new ArrayList<>();
+        try {
+        pst=connexion.getCnx().prepareStatement(requete);
+        pst.setInt(1, x);
+        pst.setString(2, title);
         rst=pst.executeQuery();
         while(rst.next()){
             list.add(new ProjectJoinTasks(rst.getInt(1),rst.getString(2),rst.getString(3),rst.getDate(4),rst.getDate(5),rst.getString(6),rst.getString(7),rst.getString(8),rst.getInt(9),rst.getString(10),rst.getString(11)));

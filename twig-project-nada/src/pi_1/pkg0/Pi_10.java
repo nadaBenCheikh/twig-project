@@ -131,12 +131,12 @@ public class Pi_10 {
         //afficher un offre
         OffersService oservice0= new OffersService();
         oservice0.displayOffer(4).forEach(e->System.out.println(e));
-       */
+       
         //confirmer un offre => ajouter un collaborateur et effacer un offre   =>le cas ou il n'ya pas de tache!!!!!!!!!
         Offers o=new Offers(4,3,3,3);
         OffersService oservice=new OffersService();
         oservice.isert(o);
-        /*
+        
         //ignorer un offre
         Offers o1=new Offers(2);
         OffersService oservice1=new OffersService();
@@ -150,6 +150,10 @@ public class Pi_10 {
         //collaborateur viré
         Colabs c1=new Colabs(11);
         ColabsService cservice1=new ColabsService();
-        cservice1.update(c1);*/
+        cservice1.update(c1);
+        
+        ProjectsService pservice=new ProjectsService();
+        boolean verif=pservice.getByName("aaa");
+        System.out.println(verif);*/
     }
 }

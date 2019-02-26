@@ -49,14 +49,29 @@ public class AjouterTache{
     
     @FXML
     void ajouterTache(ActionEvent event) {
-        String c= (String) comboboxProjet.getValue();
-        //System.out.println(c);
-        Integer s=op.get(c);
-        //System.out.println(s);
-        TasksService tservice= new TasksService();
-        tservice.isert(new Tasks(s, txtTitle.getText(), txtDescription.getText()));
-        System.out.println("c bonnnnnnnn");
-        JOptionPane.showMessageDialog(null, "Project is successfully add", "Add Project", JOptionPane.PLAIN_MESSAGE);
+        if(comboboxProjet.getValue()==null){
+            JOptionPane.showMessageDialog(null, "You must choose a project", "Add Task", JOptionPane.ERROR_MESSAGE);
+            System.out.println("projet non");
+        }
+        else if(txtTitle.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Title is not set", "Add Task", JOptionPane.ERROR_MESSAGE);
+            System.out.println("titre non");
+        }
+        else if(txtDescription.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Description is not set", "Add Task", JOptionPane.ERROR_MESSAGE);
+            System.out.println("description non");
+        }
+        else{
+            String c= (String) comboboxProjet.getValue();
+            //System.out.println(c);
+            Integer s=op.get(c);
+            //System.out.println(s);
+            TasksService tservice= new TasksService();
+            tservice.isert(new Tasks(s, txtTitle.getText(), txtDescription.getText()));
+            //System.out.println("c bonnnnnnnn");
+            JOptionPane.showMessageDialog(null, "Project is successfully add", "Add Project", JOptionPane.PLAIN_MESSAGE);
+        }
+        
     }   
     
 

@@ -90,9 +90,11 @@ public class AfficherOffers implements Initializable{
 
     @FXML
     private TableColumn<OfferJoinCollab, Integer> durationO;
+    
+    ObservableList<OfferJoinCollab> ob;
 
     @FXML
-    void confirmer(ActionEvent event) {       //a voir avec madame
+    void confirmer(ActionEvent event) {       
         OfferJoinCollab o=new OfferJoinCollab();
         o= tableview.getSelectionModel().getSelectedItem();
         OffersService oservice=new OffersService();
@@ -108,6 +110,7 @@ public class AfficherOffers implements Initializable{
         }
         if(verif==true){
             JOptionPane.showMessageDialog(null, "Offer is confirmed and a colabs is added successfully", null, JOptionPane.DEFAULT_OPTION);
+            ob.clear();
             tableview.setItems(getObservableListeToReload());
         }
     }
@@ -121,6 +124,7 @@ public class AfficherOffers implements Initializable{
             System.out.println(o);
             OffersService oservice=new OffersService();
             oservice.delete(o.getId());
+            ob.clear();
             tableview.setItems(getObservableListeToReload()); 
         }
     }
@@ -129,7 +133,7 @@ public class AfficherOffers implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         OffersService oservice= new OffersService();
         ArrayList<OfferJoinCollab> list=(ArrayList<OfferJoinCollab>) oservice.displayOffer(2);
-        ObservableList<OfferJoinCollab> ob= FXCollections.observableArrayList(list);
+        ob= FXCollections.observableArrayList(list);
         id.setCellValueFactory(new PropertyValueFactory("id"));
         projectId.setCellValueFactory(new PropertyValueFactory("projectId"));
         titleP.setCellValueFactory(new PropertyValueFactory("titleP"));
@@ -150,12 +154,33 @@ public class AfficherOffers implements Initializable{
         offerDateO.setCellValueFactory(new PropertyValueFactory("offerDateO"));
         motivationalLetterO.setCellValueFactory(new PropertyValueFactory("motivationalLetterO"));
         tableview.setItems(ob);
+        
+       
     }
     
     public ObservableList<OfferJoinCollab> getObservableListeToReload(){
         OffersService oservice= new OffersService();
         ArrayList<OfferJoinCollab> list=(ArrayList<OfferJoinCollab>) oservice.displayOffer(2);
-        ObservableList<OfferJoinCollab> ob= FXCollections.observableArrayList(list);
+        ob= FXCollections.observableArrayList(list);
+        id.setCellValueFactory(new PropertyValueFactory("id"));
+        projectId.setCellValueFactory(new PropertyValueFactory("projectId"));
+        titleP.setCellValueFactory(new PropertyValueFactory("titleP"));
+        terminationDateP.setCellValueFactory(new PropertyValueFactory("terminationDateP"));
+        categoryP.setCellValueFactory(new PropertyValueFactory("categoryP"));
+        taskId.setCellValueFactory(new PropertyValueFactory("taskId"));
+        titleT.setCellValueFactory(new PropertyValueFactory("titleT"));
+        firstName.setCellValueFactory(new PropertyValueFactory("firstName"));
+        lastName.setCellValueFactory(new PropertyValueFactory("lastName"));
+        email.setCellValueFactory(new PropertyValueFactory("email"));
+        freelancerId.setCellValueFactory(new PropertyValueFactory("freelancerId"));
+        languagesF.setCellValueFactory(new PropertyValueFactory("languagesF"));
+        minHourlyFeeF.setCellValueFactory(new PropertyValueFactory("minHourlyFeeF"));
+        maxHourlyFeeF.setCellValueFactory(new PropertyValueFactory("maxHourlyFeeF"));
+        cvLinkF.setCellValueFactory(new PropertyValueFactory("cvLinkF"));
+        bidO.setCellValueFactory(new PropertyValueFactory("bidO"));
+        durationO.setCellValueFactory(new PropertyValueFactory("durationO"));
+        offerDateO.setCellValueFactory(new PropertyValueFactory("offerDateO"));
+        motivationalLetterO.setCellValueFactory(new PropertyValueFactory("motivationalLetterO"));
         return ob;
     }
 

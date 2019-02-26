@@ -67,7 +67,7 @@ public class ColabsService implements Iservices<Colabs>{
     }
     
     @Override
-    public Colabs getById(Colabs t) {
+    public Colabs getById(int x) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
    
@@ -79,7 +79,7 @@ public class ColabsService implements Iservices<Colabs>{
         String requete="update colabs set state=? where id=?";
         try {
             pst=connexion.getCnx().prepareStatement(requete);
-            pst.setString(1,"fired");
+            pst.setString(1,"warned");
             pst.setInt(2, x);
             pst.executeUpdate();
         } catch (SQLException ex) {
