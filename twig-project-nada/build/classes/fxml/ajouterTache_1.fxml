@@ -59,20 +59,17 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <Label layoutX="59.0" layoutY="56.0" text="Add a new task">
+      <Label layoutX="59.0" layoutY="56.0" text="Add a new task" textFill="RED">
          <font>
             <Font name="Britannic Bold" size="30.0" />
          </font>
-         <textFill>
-            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-               <stops>
-                  <Stop color="WHITE" />
-                  <Stop color="WHITE" offset="0.007662835249042145" />
-                  <Stop color="#267067" offset="1.0" />
-               </stops>
-            </RadialGradient>
-         </textFill>
       </Label>
       <Button fx:id="ajouter" layoutX="334.0" layoutY="433.0" mnemonicParsing="false" onAction="#ajouterTache" prefHeight="14.0" prefWidth="116.0" style="-fx-background-radius: 10,10,10,10; -fx-background-color: #66ACAE; -fx-pref-width: 100;" text="Add" />
+      <Button fx:id="retour" layoutX="-5.0" layoutY="494.0" mnemonicParsing="false" onAction="#redirect" opacity="0.0" prefHeight="67.0" prefWidth="105.0" />
+      <ImageView fitHeight="31.0" fitWidth="51.0" layoutX="-1.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/retourr.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

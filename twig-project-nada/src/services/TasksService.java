@@ -130,7 +130,7 @@ public class TasksService implements Iservices<Tasks>{
         return list;
     }
     
-    //rechercheee
+    //rechercheee p.title like '% +
     public List<ProjectJoinTasks> displayAllProjectsAndTasksPerTitle(int x,String title){ 
         String requete="SELECT p.id,p.title,p.description,p.creationDate,p.terminationDate,p.location,p.category,p.status,t.id,t.title,t.description from projects p left join tasks t on p.id=t.projectId where p.ownerId=? and p.title=?";
         List<ProjectJoinTasks> list=new ArrayList<>();

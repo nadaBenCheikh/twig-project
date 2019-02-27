@@ -1,14 +1,19 @@
 package controllers;
 
 import entities.ProjectJoinTasks;
+import java.io.IOException;
 import java.net.URL;
-import static java.util.Collections.list;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -16,6 +21,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
 import services.TasksService;
 
 public class AfficherFrontTasks implements Initializable{
@@ -25,7 +31,23 @@ public class AfficherFrontTasks implements Initializable{
 
     @FXML
     private Pane pnlOverview;
-
+    
+    @FXML
+    private Button retour;
+    
+    @FXML
+    void redirect(ActionEvent event) throws IOException {
+        /* pnlOrders.getChildren().clear();
+        Parent parent = FXMLLoader.load(getClass().getResource("../Fxml/afficherFrontOfficeTasks.fxml"));
+        pnlOrders.getChildren().add(parent);
+        pnlOrders.toFront(); */
+        Parent parent = FXMLLoader.load(getClass().getResource("../Fxml/afficherFrontOfficeTasks.fxml"));
+        Scene scene = new Scene(parent);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.close();
+    }
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         

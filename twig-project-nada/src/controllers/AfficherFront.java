@@ -1,11 +1,8 @@
 package controllers;
 
 import entities.DonneurJoinProject;
-import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import java.awt.Color;
-import java.awt.Paint;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Iterator;
@@ -13,10 +10,11 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -36,7 +34,7 @@ public class AfficherFront implements Initializable{
 
     @FXML
     private VBox vbprojet;
-
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
        
@@ -57,6 +55,7 @@ public class AfficherFront implements Initializable{
             vbprojet.getChildren().add(hb);         
         }
     }
+    
     public VBox createVBProject(DonneurJoinProject j){
       
         VBox vbProject = new VBox();

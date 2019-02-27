@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterProjet">
+   <children>
+      <Button fx:id="ajouter" layoutX="398.0" layoutY="450.0" mnemonicParsing="false" onAction="#add" prefHeight="8.0" prefWidth="131.0" style="-fx-background-radius: 10,10,10,10; -fx-background-color: orange; -fx-pref-width: 100;" text="Add" textAlignment="CENTER" textFill="#232324" textOverrun="CLIP" />
+      <Label layoutX="150.0" layoutY="180.0" prefHeight="36.0" prefWidth="94.0" text="Title" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Label layoutX="150.0" layoutY="220.0" text="Description" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Label layoutX="150.0" layoutY="260.0" text="Location" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Label layoutX="150.0" layoutY="300.0" text="Category" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Label layoutX="150.0" layoutY="345.0" prefHeight="31.0" prefWidth="300.0" text="Termination Date" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <TextField fx:id="txtTitle" layoutX="287.0" layoutY="180.0" />
+      <DatePicker fx:id="DatePickerTermination" layoutX="320.0" layoutY="345.0" />
+      <TextField fx:id="txtLocation" layoutX="287.0" layoutY="260.0" />
+      <TextField fx:id="txtCategory" layoutX="287.0" layoutY="300.0" />
+      <Label layoutX="59.0" layoutY="56.0" prefHeight="69.0" prefWidth="348.0" text="Create a new Project" textFill="RED">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtDescription" layoutX="287.0" layoutY="220.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label fx:id="errormsg1" layoutX="436.0" layoutY="179.0" prefHeight="25.0" prefWidth="180.0" textFill="RED" />
+      <Label fx:id="errormsg2" layoutX="435.0" layoutY="219.0" prefHeight="25.0" prefWidth="188.0" textFill="RED" />
+      <Label fx:id="errormsg3" layoutX="434.0" layoutY="261.0" prefHeight="25.0" prefWidth="188.0" textFill="RED" />
+      <Label fx:id="errormsg4" layoutX="436.0" layoutY="299.0" prefHeight="25.0" prefWidth="188.0" textFill="RED" />
+      <Label fx:id="errormsg5" layoutX="495.0" layoutY="344.0" prefHeight="25.0" prefWidth="140.0" textFill="RED" />
+   </children>
+</Pane>

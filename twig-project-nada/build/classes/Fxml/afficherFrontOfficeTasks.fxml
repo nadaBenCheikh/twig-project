@@ -14,10 +14,11 @@
 
 <Pane fx:id="pnlOverview" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherFrontTasks">
    <children>
-      <ScrollPane layoutX="34.0" layoutY="106.0" prefHeight="318.0" prefWidth="711.0">
+      <ScrollPane layoutX="63.0" layoutY="92.0" prefHeight="366.0" prefWidth="674.0">
          <content>
-            <VBox fx:id="vbTasks" prefHeight="304.0" prefWidth="711.0" />
+            <VBox fx:id="vbTasks" prefHeight="362.0" prefWidth="671.0" />
          </content>
       </ScrollPane>
+      <Button fx:id="retour" layoutX="7.0" layoutY="519.0" mnemonicParsing="false" onAction="#redirect" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: orange; -fx-background-radius: 10,10,10,10; -fx-pref-width: 60px;" text="Back" />
    </children>
 </Pane>

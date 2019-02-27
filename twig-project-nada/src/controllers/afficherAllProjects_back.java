@@ -1,7 +1,6 @@
 package controllers;
 
 import entities.ProjectJoinTasks;
-import entities.Projects;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;

@@ -1,4 +1,4 @@
-/*.button
+.button
 {
 -fx-background-color : #05071F;
 -fx-text-fill : #e7e5e5;
@@ -40,7 +40,3 @@
 .scroll-pane > .corner {
     -fx-background-color: black;
 }
-
-.root{
-    -fx-background-color: #262626;
-}*/

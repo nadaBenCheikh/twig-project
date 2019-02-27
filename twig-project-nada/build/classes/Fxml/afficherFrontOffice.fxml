@@ -14,10 +14,15 @@
 
 <Pane fx:id="pnlOverview" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherFront">
    <children>
-      <ScrollPane layoutX="98.0" layoutY="138.0" prefHeight="275.0" prefWidth="571.0">
+      <ScrollPane layoutX="96.0" layoutY="87.0" prefHeight="433.0" prefWidth="629.0">
          <content>
-            <VBox fx:id="vbprojet" prefHeight="304.0" prefWidth="711.0" />
+            <VBox fx:id="vbprojet" prefHeight="432.0" prefWidth="627.0" />
          </content>
       </ScrollPane>
+      <Label layoutX="48.0" layoutY="26.0" prefHeight="36.0" prefWidth="353.0" text="All Available Projects" textFill="RED">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
    </children>
 </Pane>
