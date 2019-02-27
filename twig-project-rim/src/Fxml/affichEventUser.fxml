@@ -13,25 +13,31 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EventUserController">
+<Pane prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.affichEventUserDetail">
    <children>
       <ImageView fitHeight="52.0" fitWidth="167.0" layoutX="640.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Sscolorlogo_lg.png" />
          </image>
       </ImageView>
-      <TableView fx:id="tableview" layoutX="3.0" layoutY="19.0" prefHeight="510.0" prefWidth="562.0">
+      <TableView fx:id="tableview" layoutX="44.0" layoutY="30.0" prefHeight="510.0" prefWidth="298.0">
         <columns>
           <TableColumn fx:id="id" prefWidth="75.0" text="id" visible="false" />
-          <TableColumn fx:id="title" prefWidth="75.0" text="title" />
-            <TableColumn fx:id="description" prefWidth="75.0" text="describtion" />
-            <TableColumn fx:id="dateCreation" prefWidth="85.0" text="Creation Date" />
-            <TableColumn fx:id="adresse" prefWidth="75.0" text="adresse" />
-            <TableColumn fx:id="nmbreMax" prefWidth="100.0" text="MaximumNum" />
-            <TableColumn fx:id="category" prefWidth="75.0" text="Category" />
-            <TableColumn fx:id="image" prefWidth="75.0" text="image" />
+          <TableColumn fx:id="title" minWidth="50.0" prefWidth="300.0" text="liste des événement" />
+            <TableColumn fx:id="description" prefWidth="75.0" text="describtion" visible="false" />
+            <TableColumn fx:id="dateCreation" prefWidth="85.0" text="Creation Date" visible="false" />
+            <TableColumn fx:id="adresse" prefWidth="75.0" text="adresse" visible="false" />
+            <TableColumn fx:id="nmbreMax" prefWidth="100.0" text="MaximumNum" visible="false" />
+            <TableColumn fx:id="category" prefWidth="75.0" text="Category" visible="false" />
+            <TableColumn fx:id="image" prefWidth="75.0" text="image" visible="false" />
         </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="txtDetails" mnemonicParsing="false" onAction="#afficherDetails" text="afficherDetail" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
       </TableView>
-      <Button fx:id="participer" layoutX="607.0" layoutY="428.0" mnemonicParsing="false" onAction="#participer" text="participer" />
    </children>
 </Pane>

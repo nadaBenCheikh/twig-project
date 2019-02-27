@@ -35,6 +35,17 @@ public class jointureTable {
         this.nom=nom;
 
     }
+    public jointureTable(int id, String question, String bonneRep, int score, Time duree, String type, String nom) {
+       this.id = id;
+       
+        this.question = question;
+        this.bonneRep = bonneRep;
+        this.score = score;
+        this.duree = duree;
+        this.type = type;
+        this.nom=nom;
+
+    }
 
     public String getNom() {
         return nom;

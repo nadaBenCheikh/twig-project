@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.validation.*?>
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.detailEventController">
+   <children>
+      <TextField fx:id="txt_titre" layoutX="91.0" layoutY="193.0" prefHeight="25.0" prefWidth="188.0" />
+      <Text fill="#db3907" layoutX="5.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="description">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#db3907" layoutX="17.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse">
+         <font>
+            <Font name="Britannic Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#db3907" layoutX="8.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="category">
+         <font>
+            <Font name="Britannic Bold" size="22.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txt_date" layoutX="203.0" layoutY="358.0" opacity="0.0" />
+      <ImageView fitHeight="74.0" fitWidth="174.0" layoutX="577.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Sscolorlogo_lg.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="ajout" layoutX="527.0" layoutY="358.0" mnemonicParsing="false" onAction="#ajouterTest" opacity="0.0" prefHeight="62.0" prefWidth="101.0" text="Button" />
+      <TextField fx:id="txt_tadresse" layoutX="100.0" layoutY="511.0" prefHeight="25.0" prefWidth="188.0" />
+      <TextField fx:id="txt_category" layoutX="94.0" layoutY="237.0" prefHeight="25.0" prefWidth="188.0" />
+      <TextArea fx:id="txt_desc" layoutX="100.0" layoutY="289.0" prefHeight="200.0" prefWidth="300.0" />
+      <ImageView fx:id="image" fitHeight="176.0" fitWidth="324.0" layoutX="297.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</Pane>

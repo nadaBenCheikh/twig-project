@@ -49,6 +49,7 @@ public class questionServ implements Iserv<questions>{
          }
 
     }
+    
 
     @Override
     public void delete(questions t) {
@@ -63,7 +64,18 @@ public class questionServ implements Iserv<questions>{
              Logger.getLogger(questionServ.class.getName()).log(Level.SEVERE, null, ex);
          }
     }
+   public void deletee(int x) {
+                     String requete="delete from questions where id=?";
 
+         try {
+            pst=connexion.getCnx().prepareStatement(requete);
+            pst.setInt(1, x);
+            pst.executeUpdate();
+
+         } catch (SQLException ex) {
+             Logger.getLogger(questionServ.class.getName()).log(Level.SEVERE, null, ex);
+         }
+    }
     @Override
     public void update(questions t) {
       String requete="update questions set testID=?,question=?,bonneRep=? where id=?";
@@ -154,7 +166,7 @@ return list;
           return list;
 }*/
        public List<jointureTable> display(){
-       String requete="SELECT q.*, t.score, t.duree,t.type,t.nom FROM questions q right join test t on t.id = q.testID";   
+       String requete="SELECT q.*, t.score, t.duree,t.type,t.nom FROM questions q right join test t on t.id = q.testID group by q.testID";   
        List<jointureTable> list=new ArrayList<>();
        try {
             pst=connexion.getCnx().prepareStatement(requete);
@@ -166,5 +178,37 @@ return list;
              Logger.getLogger(questionServ.class.getName()).log(Level.SEVERE, null, ex);
        }
           return list;
+       }
+       public List<jointureTable> displayTest(){
+       String requete="SELECT q.id, q.question, q.bonneRep, t.id as testID, t.score, t.duree,t.type,t.nom FROM test t left join questions q on t.id = q.testID group by t.id";   
+       List<jointureTable> list=new ArrayList<>();
+       try {
+            pst=connexion.getCnx().prepareStatement(requete);
+           rs=pst.executeQuery();
+            while(rs.next()){
+            list.add(new jointureTable(rs.getInt("id"),rs.getString("question"),rs.getString("bonneRep"),rs.getInt("score"),rs.getTime("duree"),rs.getString("type"),rs.getString("nom")));
+            }
+       } catch (SQLException ex) {
+             Logger.getLogger(questionServ.class.getName()).log(Level.SEVERE, null, ex);
+       }
+          return list;
 }
+
+ public List<jointureTable> displayNom(String x){
+ String requete="SELECT q.id, q.question, q.bonneRep, t.id as testID, t.score, t.duree,t.type,t.nom FROM test t left join questions q on t.id = q.testID where t.nom =? group by t.id ";    
+       List<jointureTable> list=new ArrayList<>();
+       try {
+            pst=connexion.getCnx().prepareStatement(requete);
+            pst.setString(1, x);
+            rs=pst.executeQuery();
+            while(rs.next()){
+list.add(new jointureTable(rs.getInt("id"),rs.getString("question"),rs.getString("bonneRep"),rs.getInt("score"),rs.getTime("duree"),rs.getString("type"),rs.getString("nom")));            }
+       } catch (SQLException ex) {
+             Logger.getLogger(questionServ.class.getName()).log(Level.SEVERE, null, ex);
+       }
+          return list;
+ }
 }
+            //
+  
+       

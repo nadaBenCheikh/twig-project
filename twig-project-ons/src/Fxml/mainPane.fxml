@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.effect.*?>
@@ -16,15 +17,32 @@
       <Button fx:id="authentifier" layoutX="310.0" layoutY="427.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="189.0" text="Sign in" />
       <TextField fx:id="email" layoutX="308.0" layoutY="213.0" prefHeight="25.0" prefWidth="189.0" />
       <TextField fx:id="password" layoutX="308.0" layoutY="301.0" prefHeight="25.0" prefWidth="189.0" />
-      <Label layoutX="200.0" layoutY="214.0" text="Email" textFill="#db3907">
+      <Label layoutX="200.0" layoutY="216.0" text="Email">
          <font>
             <Font name="Britannic Bold" size="21.0" />
-         </font></Label>
-      <Label layoutX="200.0" layoutY="302.0" text="password" textFill="#db3907">
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#db3907" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Label layoutX="199.0" layoutY="302.0" text="Password">
          <font>
             <Font name="Britannic Bold" size="21.0" />
-         </font></Label>
-      <ImageView fitHeight="200.0" fitWidth="250.0" layoutX="201.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="0.007662835249042145" />
+                  <Stop color="#db3907" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <ImageView fitHeight="111.0" fitWidth="208.0" layoutX="269.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Sscolorlogo_lg.png" />
          </image>

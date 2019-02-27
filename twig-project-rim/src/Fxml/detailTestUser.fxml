@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.passerTestController">
+   <children>
+      <Label fx:id="testName" layoutX="33.0" layoutY="23.0" prefHeight="25.0" prefWidth="87.0" text="Label" textFill="#b93131">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="question" layoutX="159.0" layoutY="79.0" />
+      <TextField fx:id="booneRep" layoutX="159.0" layoutY="132.0" />
+      <Label layoutX="21.0" layoutY="136.0" text="Saisir la bonne réponse" />
+      <Button fx:id="valid" layoutX="368.0" layoutY="225.0" mnemonicParsing="false" onAction="#validerRep" text="valider " />
+   </children>
+</AnchorPane>

@@ -6,6 +6,7 @@
 package service;
 
 import entities.event;
+import entities.jointureParticipant;
 import entities.participant;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -129,12 +130,35 @@ return list;
                 Logger.getLogger(participantService.class.getName()).log(Level.SEVERE, null, ex);
             }
         
+        
           
         return list;
     }
-    
-    
-    
-    
+     public List<jointureParticipant> displaypPArtici() {
+        String requete="SELECT * FROM event e LEFT join participant p on e.id=p.eventID INNER join freelancer f on p.feelancerID=f.id INNER join users u ON f.userId=u.id";
+        List<jointureParticipant> list =new ArrayList<>();
+        try {
+            
+        pst=connexion.getCnx().prepareStatement(requete);
+         
+          rs=pst.executeQuery();
+            while(rs.next()){
+       list.add(new jointureParticipant(rs.getInt("id"),rs.getInt("eventID"),rs.getInt("feelancerID"),rs.getString("firstName"),rs.getString("lastName"),rs.getString("email")));
+            }
+            } catch (SQLException ex) {
+                Logger.getLogger(participantService.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        return list;
     
 }
+}
+     
+
+ 
+  
+
+    
+    
+    
+    
+

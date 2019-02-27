@@ -22,7 +22,8 @@ public class Freelancer {
     public Freelancer() {
     }
 
-    public Freelancer(String languages, int minHourlyFee, int gender, String cvLink, int maxHourlyFee, String ranking) {
+    public Freelancer(String languages, int minHourlyFee, int gender, 
+            String cvLink, int maxHourlyFee, String ranking) {
         this.languages = languages;
         this.minHourlyFee = minHourlyFee;
         this.gender = gender;
@@ -31,7 +32,8 @@ public class Freelancer {
         this.ranking = ranking;
     }
 
-    public Freelancer(int id, int userId, String languages, int minHourlyFee, int gender, String cvLink, int maxHourlyFee, String ranking) {
+    public Freelancer(int id, int userId, String languages, int minHourlyFee, 
+            int gender, String cvLink, int maxHourlyFee, String ranking) {
         this.id = id;
         this.userId = userId;
         this.languages = languages;
@@ -42,7 +44,8 @@ public class Freelancer {
         this.ranking = ranking;
     }
 
-    public Freelancer(int userId, String languages, int minHourlyFee, int gender, String cvLink, int maxHourlyFee, String ranking) {
+    public Freelancer(int userId, String languages, int minHourlyFee, int gender,
+            String cvLink, int maxHourlyFee, String ranking) {
         this.userId = userId;
         this.languages = languages;
         this.minHourlyFee = minHourlyFee;
@@ -124,7 +127,10 @@ public class Freelancer {
 
     @Override
     public String toString() {
-        return "Freelancer{" + "id=" + id + ", userId=" + userId + ", languages=" + languages + ", minHourlyFee=" + minHourlyFee + ", gender=" + gender + ", cvLink=" + cvLink + ", maxHourlyFee=" + maxHourlyFee + ", ranking=" + ranking + '}';
+        return "Freelancer{" + "id=" + id + ", userId=" + userId + ", languages=" +
+                languages + ", minHourlyFee=" + minHourlyFee + ", gender=" + 
+                gender + ", cvLink=" + cvLink + ", maxHourlyFee=" + maxHourlyFee 
+                + ", ranking=" + ranking + '}';
     }
     
     

@@ -108,6 +108,28 @@ list.add(new test(rs.getInt("id"),rs.getInt("score"),rs.getTime("duree"),rs.getS
          return test4;
 
     }
+      public test getByName(String x) {
+        String requete="select * from test where nom=?";
+             test test4=new test();
+         try {
+           pst=connexion.getCnx().prepareStatement(requete);
+             pst.setString(1,x);
+          rs=pst.executeQuery();
+          if(rs.next()){
+              while(rs.next()){
+                test4=new test(rs.getInt("id"),rs.getInt("score"),rs.getTime("duree"),rs.getString("type"),rs.getString("nom"),rs.getString("description"));
+             }  
+          }else{
+              test4 = null;
+          }
+           
+         }catch (SQLException ex) {
+             Logger.getLogger(testServ.class.getName()).log(Level.SEVERE, null, ex);
+             test4 = null;
+         }
+         return test4;
+
+    }
       public List<test> getNomId() {
          List<test> list = new ArrayList<>();
              String requete="select test.id , test.nom FROM test";
@@ -125,6 +147,18 @@ list.add(new test(rs.getInt("id"),rs.getString("nom")));
       
       
     }
+        public void deletee(int x) {
+                     String requete="delete from test where id=?";
+
+         try {
+            pst=connexion.getCnx().prepareStatement(requete);
+            pst.setInt(1, x);
+            pst.executeUpdate();
+
+         } catch (SQLException ex) {
+             Logger.getLogger(questionServ.class.getName()).log(Level.SEVERE, null, ex);
+         }
+}
 }
     
 
