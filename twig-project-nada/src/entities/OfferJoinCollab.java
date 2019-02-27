@@ -15,14 +15,10 @@ public class OfferJoinCollab {
     private int id;
     private int projectId;
     private String titleP;
-    private String descriptionP;
-    private Date creationDateP;
     private Date terminationDateP;
-    private String locationP;
-    private String categoryP;
+    private String categoryP; 
     private int taskId;
     private String titleT;
-    private String descriptionT;
     private String firstName;
     private String lastName;
     private String email;
@@ -39,18 +35,14 @@ public class OfferJoinCollab {
     public OfferJoinCollab() {
     }
 
-    public OfferJoinCollab(int id, int projectId, String titleP, String descriptionP, Date creationDateP, Date terminationDateP, String locationP, String categoryP, int taskId, String titleT, String descriptionT, String firstName, String lastName, String email, int freelancerId, String languagesF, int minHourlyFeeF, int maxHourlyFeeF, String cvLinkF, int bidO, int durationO, Date offerDateO, String motivationalLetterO) {
+    public OfferJoinCollab(int id, int projectId, String titleP, Date terminationDateP, String categoryP, int taskId, String titleT, String firstName, String lastName, String email, int freelancerId, String languagesF, int minHourlyFeeF, int maxHourlyFeeF, String cvLinkF, int bidO, int durationO, Date offerDateO, String motivationalLetterO) {
         this.id = id;
         this.projectId = projectId;
         this.titleP = titleP;
-        this.descriptionP = descriptionP;
-        this.creationDateP = creationDateP;
         this.terminationDateP = terminationDateP;
-        this.locationP = locationP;
         this.categoryP = categoryP;
         this.taskId = taskId;
         this.titleT = titleT;
-        this.descriptionT = descriptionT;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -89,36 +81,12 @@ public class OfferJoinCollab {
         this.titleP = titleP;
     }
 
-    public String getDescriptionP() {
-        return descriptionP;
-    }
-
-    public void setDescriptionP(String descriptionP) {
-        this.descriptionP = descriptionP;
-    }
-
-    public Date getCreationDateP() {
-        return creationDateP;
-    }
-
-    public void setCreationDateP(Date creationDateP) {
-        this.creationDateP = creationDateP;
-    }
-
     public Date getTerminationDateP() {
         return terminationDateP;
     }
 
     public void setTerminationDateP(Date terminationDateP) {
         this.terminationDateP = terminationDateP;
-    }
-
-    public String getLocationP() {
-        return locationP;
-    }
-
-    public void setLocationP(String locationP) {
-        this.locationP = locationP;
     }
 
     public String getCategoryP() {
@@ -143,14 +111,6 @@ public class OfferJoinCollab {
 
     public void setTitleT(String titleT) {
         this.titleT = titleT;
-    }
-
-    public String getDescriptionT() {
-        return descriptionT;
-    }
-
-    public void setDescriptionT(String descriptionT) {
-        this.descriptionT = descriptionT;
     }
 
     public String getFirstName() {
@@ -251,9 +211,7 @@ public class OfferJoinCollab {
 
     @Override
     public String toString() {
-        return "OfferJoinCollab{" + "projectId=" + projectId + ", titleP=" + titleP + ", descriptionP=" + descriptionP + ", creationDateP=" + creationDateP + ", terminationDateP=" + terminationDateP + ", locationP=" + locationP + ", categoryP=" + categoryP + ", taskId=" + taskId + ", titleT=" + titleT + ", descriptionT=" + descriptionT + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", freelancerId=" + freelancerId + ", languagesF=" + languagesF + ", minHourlyFeeF=" + minHourlyFeeF + ", maxHourlyFeeF=" + maxHourlyFeeF + ", cvLinkF=" + cvLinkF + ", bidO=" + bidO + ", durationO=" + durationO + ", offerDateO=" + offerDateO + ", motivationalLetterO=" + motivationalLetterO + '}';
+        return "OfferJoinCollab{" + "id=" + id + ", projectId=" + projectId + ", titleP=" + titleP + ", terminationDateP=" + terminationDateP + ", categoryP=" + categoryP + ", taskId=" + taskId + ", titleT=" + titleT + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", freelancerId=" + freelancerId + ", languagesF=" + languagesF + ", minHourlyFeeF=" + minHourlyFeeF + ", maxHourlyFeeF=" + maxHourlyFeeF + ", cvLinkF=" + cvLinkF + ", bidO=" + bidO + ", durationO=" + durationO + ", offerDateO=" + offerDateO + ", motivationalLetterO=" + motivationalLetterO + '}';
     }
-    
-    
     
 }

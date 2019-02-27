@@ -42,14 +42,13 @@ public class Projects {
     }
     
     //modifier
-    public Projects(int id,String title, String description, String location, String category, Date terminationDate, String status) {
+    public Projects(int id,String title, String description, String location, String category, Date terminationDate) {
         this.id=id;
         this.title = title;
         this.description = description;
         this.location = location;
         this.category = category;
         this.terminationDate = terminationDate;
-        this.status = status;
     }
     
     //afficherAllProject du donneur d'ordre

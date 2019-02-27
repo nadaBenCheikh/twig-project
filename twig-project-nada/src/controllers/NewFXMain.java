@@ -25,19 +25,16 @@ public class NewFXMain extends Application {
     public void start(Stage primaryStage) throws IOException {
       
          
-        Parent root= FXMLLoader.load(getClass().getResource("../Fxml/ajouterTache_1.fxml"));
-        
+        Parent root= FXMLLoader.load(getClass().getResource("../Fxml/afficherAllProjects_back_1.fxml"));    
         
         Scene scene = new Scene(root);
-        
         primaryStage.setTitle("Hello World!");
-        
+ 
         
         primaryStage.setScene(scene);
         primaryStage.show();
     }
- //font awesome icons
- //java run time 8
+
     /**
      * @param args the command line arguments
      */

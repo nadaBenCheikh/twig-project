@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.affichegeneralController">
+   <children>
+      <Label layoutX="33.0" layoutY="123.0" text="firstName" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font></Label>
+      <Label layoutX="33.0" layoutY="186.0" text="email" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font></Label>
+      <Label layoutX="30.0" layoutY="245.0" text="phone" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font></Label>
+      <Label layoutX="30.0" layoutY="319.0" text="description" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font></Label>
+      <Label layoutX="335.0" layoutY="123.0" text="lastName" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font></Label>
+      <Label layoutX="335.0" layoutY="252.0" text="region" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font></Label>
+      <Label layoutX="333.0" layoutY="321.0" text="picturePath" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font></Label>
+      <TextField fx:id="firstName" layoutX="140.0" layoutY="121.0" />
+      <TextField fx:id="email" layoutX="140.0" layoutY="184.0" prefHeight="25.0" prefWidth="478.0" />
+      <TextField fx:id="phone" layoutX="140.0" layoutY="250.0" />
+      <TextField fx:id="description" layoutX="143.0" layoutY="319.0" />
+      <TextField fx:id="lastName" layoutX="469.0" layoutY="122.0" />
+      <TextField fx:id="region" layoutX="469.0" layoutY="250.0" />
+      <TextField fx:id="picturePath" layoutX="636.0" layoutY="357.0" prefHeight="25.0" prefWidth="104.0" visible="false" />
+      <Button fx:id="btnupdate" layoutX="590.0" layoutY="414.0" mnemonicParsing="false" onAction="#Update" style="-fx-background-color: #66ACAE; -fx-background-radius: 10,10,10,10;" text="Update" textFill="#111111" />
+      <Button fx:id="uploadimg" layoutX="636.0" layoutY="320.0" mnemonicParsing="false" onAction="#uploadImage" prefHeight="25.0" prefWidth="104.0" text="Upload Image" />
+      <ImageView fx:id="imageView" fitHeight="101.0" fitWidth="166.0" layoutX="461.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnreturn" layoutX="688.0" layoutY="414.0" mnemonicParsing="false" onAction="#Return" style="-fx-background-color: #66ACAE; -fx-background-radius: 10,10,10,10;" text="Return" textFill="#171717" />
+   </children>
+</Pane>
