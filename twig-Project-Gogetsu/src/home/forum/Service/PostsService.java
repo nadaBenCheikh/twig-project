@@ -1,17 +1,16 @@
 package home.forum.Service;
 
 import home.forum.entity.PostsForum;
-import home.scrumBoard.Entity.scrumBoard;
-import home.scrumBoard.Entity.scrumNotes;
 import home.scrumBoard.Service.scrumNotesService;
 import home.utils.Connexion;
-import home.utils.UserInstance;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import static home.Login1.controllers.loginController.userConnect;
 
 public class PostsService {
     private Connexion cnx;
@@ -31,7 +30,7 @@ public class PostsService {
             pst.setString(1, posts.getDescription());
             pst.setString(2, posts.getSubject());
             pst.setString(3, posts.getCategory());
-            pst.setInt(4, UserInstance.getUser1().getId());  //tijbid il id mil project ki tisna3 projet yit3mal coworking space
+            pst.setInt(4, userConnect.getId());  //tijbid il id mil project ki tisna3 projet yit3mal coworking space
             pst.setDate(5, posts.getPostedOn());
             if(pst.executeUpdate()==1){
                 rs = pst.getGeneratedKeys();

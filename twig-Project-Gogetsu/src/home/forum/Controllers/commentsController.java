@@ -1,8 +1,6 @@
 package home.forum.Controllers;
 
 import home.forum.Service.PostsCommentsService;
-import home.forum.entity.CommentsForum;
-import home.utils.UserInstance;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -15,6 +13,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.util.Date;
+
+import static home.Login1.controllers.loginController.userConnect;
 
 
 public class commentsController {
@@ -69,7 +69,7 @@ public class commentsController {
     }
     @FXML
     void sendButton(ActionEvent event) {
-        linkForumController.addCommentToUi(textTosend.getText(), UserInstance.getUser1().getFirstName()+" "+UserInstance.getUser1().getLastName(),new Date().toString());
+        linkForumController.addCommentToUi(textTosend.getText(), userConnect.getFirstName()+" "+userConnect.getLastName(),new Date().toString());
         textTosend.clear();
     }
     @FXML

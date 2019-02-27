@@ -1,7 +1,6 @@
 package home.login.Controller;
 
 import com.jfoenix.controls.JFXButton;
-import home.utils.UserInstance;
 import home.utils.entity.user;
 import home.utils.service.userService;
 import javafx.event.ActionEvent;
@@ -33,7 +32,7 @@ public class signIn {
             Stage stage = (Stage) loginButton.getScene().getWindow();
             stage.close();
             Stage primaryStage = new Stage();
-            UserInstance userInstance = UserInstance.getInstance(email.getText(), password.getText());
+            //UserInstance userInstance = UserInstance.getInstance(email.getText(), password.getText());
             Parent root = FXMLLoader.load(getClass().getResource("../../Home.fxml"));
             primaryStage.setScene(new Scene(root));
             //set stage borderless
