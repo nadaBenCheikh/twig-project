@@ -12,15 +12,18 @@ import java.sql.Date;
  * @author esprit
  */
 public class ProjectJoinTasks {
+    private int id;
     private String title;
     private String description;
     private Date creationDate;
     private Date terminationDate;
     private String location;
     private String category;
+    private String status;
+    private int idT;
     private String titleT;
-    private String descriptionT;
-
+    private String descriptionT; 
+    
     public ProjectJoinTasks() {
     }
 
@@ -34,7 +37,45 @@ public class ProjectJoinTasks {
         this.titleT = titleT;
         this.descriptionT = descriptionT;
     }
+   
+    public ProjectJoinTasks(int id,String title, String description, Date creationDate, Date terminationDate, String location, String category,String status, int idT, String titleT, String descriptionT) {
+        this.id=id;
+        this.title = title;
+        this.description = description;
+        this.creationDate = creationDate;
+        this.terminationDate = terminationDate;
+        this.location = location;
+        this.category = category;
+        this.status=status;
+        this.idT=idT;
+        this.titleT = titleT;
+        this.descriptionT = descriptionT;
+    }  
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getIdT() {
+        return idT;
+    }
+
+    public void setIdT(int idT) {
+        this.idT = idT;
+    }
+    
     public String getTitle() {
         return title;
     }
@@ -101,7 +142,11 @@ public class ProjectJoinTasks {
 
     @Override
     public String toString() {
-        return "ProjectJoinTasks{" + "title=" + title + ", description=" + description + ", creationDate=" + creationDate + ", terminationDate=" + terminationDate + ", location=" + location + ", category=" + category + ", titleTask=" + titleT + ", descriptionTask=" + descriptionT + '}';
+        return "ProjectJoinTasks{" + "id=" + id + ", title=" + title + ", description=" + description + ", creationDate=" + creationDate + ", terminationDate=" + terminationDate + ", location=" + location + ", category=" + category + ", status=" + status + ", idT=" + idT + ", titleT=" + titleT + ", descriptionT=" + descriptionT + '}';
     }
+
+    
+
+    
     
 }

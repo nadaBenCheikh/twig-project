@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="571.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <TableView fx:id="eventTable" layoutX="-8.0" prefHeight="535.0" prefWidth="611.0">
+        <columns>
+          <TableColumn fx:id="tableView" prefWidth="75.0" text="id" />
+          <TableColumn prefWidth="75.0" text="titre" />
+            <TableColumn fx:id="tableView1" prefWidth="75.0" text="description" />
+            <TableColumn fx:id="tableView11" minWidth="20.0" text="dateCreation" />
+            <TableColumn fx:id="tableView111" prefWidth="75.0" text="adresse" />
+            <TableColumn fx:id="tableView1111" prefWidth="75.0" text="nmbreMax" />
+            <TableColumn fx:id="tableView11111" prefWidth="75.0" text="category" />
+            <TableColumn prefWidth="75.0" text="image" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

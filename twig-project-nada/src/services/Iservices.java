@@ -13,8 +13,8 @@ import java.util.List;
  */
 public interface Iservices<T> {
     void isert(T t);
-    void delete(T t);
+    void delete(int x);
     void update(T t);
     List<T> displayAllProjects(int x);
-    T getById(T t);
+    T getById(int x);
 }

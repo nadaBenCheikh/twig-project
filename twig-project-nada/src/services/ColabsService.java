@@ -6,7 +6,7 @@
 package services;
 
 import entities.Colabs;
-import entities.OfferJoinCollab;
+import entities.ColabsJoinProject;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -36,11 +36,11 @@ public class ColabsService implements Iservices<Colabs>{
     }
 
     @Override
-    public void delete(Colabs t) {
+    public void delete(int x) {
         String requete="DELETE FROM colabs WHERE id=?";
         try {
             pst=connexion.getCnx().prepareStatement(requete);
-            pst.setInt(1, t.getId());
+            pst.setInt(1, x);
             pst.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(ColabsService.class.getName()).log(Level.SEVERE, null, ex);
@@ -67,7 +67,7 @@ public class ColabsService implements Iservices<Colabs>{
     }
     
     @Override
-    public Colabs getById(Colabs t) {
+    public Colabs getById(int x) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
    
@@ -75,6 +75,32 @@ public class ColabsService implements Iservices<Colabs>{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    public void updateState(int x) {
+        String requete="update colabs set state=? where id=?";
+        try {
+            pst=connexion.getCnx().prepareStatement(requete);
+            pst.setString(1,"warned");
+            pst.setInt(2, x);
+            pst.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(ColabsService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     //en tant que donneur d'ordre je veux consulter les collaborateurs pour les projets et leurs taches sachant que le freelancer est referencé a la table user
-        
+     public List<ColabsJoinProject> displayColabs(int x) {
+        String requete="SELECT c.id,p.id,p.title,p.terminationDate,t.id,t.title,c.state,u.firstName,u.lastName,u.email,f.id,f.languages from tasks t right join projects p on t.projectId=p.id inner join colabs c on c.projectId=p.id INNER join freelancer f on c.freelancerId=f.id inner join users u on f.userId=u.id where p.ownerId=?";
+        List<ColabsJoinProject> list=new ArrayList<>();
+         try {
+            pst=connexion.getCnx().prepareStatement(requete);
+            pst.setInt(1, x);
+            rst=pst.executeQuery();
+            while(rst.next()){
+                list.add(new ColabsJoinProject(rst.getInt(1),rst.getInt(2),rst.getString(3),rst.getDate(4),rst.getInt(5),rst.getString(6),rst.getString(7),rst.getString(8),rst.getString(9),rst.getString(10),rst.getInt(11),rst.getString(12)));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ColabsService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list; 
+     }  
 }

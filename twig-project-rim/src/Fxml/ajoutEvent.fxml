@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.eventController">
+   <children>
+      <TextField fx:id="txt_title" layoutX="174.0" layoutY="93.0" />
+      <TextField fx:id="txt_describ" layoutX="174.0" layoutY="146.0" />
+      <TextField fx:id="txt_adress" layoutX="180.0" layoutY="248.0" />
+      <TextField fx:id="txt_nombre" layoutX="180.0" layoutY="303.0" />
+      <Text fill="#aaabab" layoutX="14.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="title" wrappingWidth="30.603515625">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#aaabab" layoutX="11.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="describtion">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#aaabab" layoutX="11.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="txt_date" layoutX="174.0" layoutY="192.0" prefHeight="25.0" prefWidth="151.0" />
+      <Text fill="#aaabab" layoutX="11.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="address">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#aaabab" layoutX="7.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum number">
+         <font>
+            <Font name="Britannic Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#aaabab" layoutX="13.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category">
+         <font>
+            <Font name="Britannic Bold" size="22.0" />
+         </font>
+      </Text>
+      <Label layoutX="15.0" layoutY="417.0" text="Image" textFill="#aaabab">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_image" layoutX="180.0" layoutY="415.0" />
+      <ImageView fitHeight="74.0" fitWidth="174.0" layoutX="572.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Sscolorlogo_lg.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="ajouter" layoutX="583.0" layoutY="518.0" mnemonicParsing="false" onAction="#ajouterEvent" opacity="0.85" prefHeight="12.0" prefWidth="89.0" style="-fx-pref-width: 100px; -fx-background-radius: 10,10,10,10;" text="Add" textFill="#030202">
+         <font>
+            <Font name="Britannic Bold" size="16.0" />
+         </font></Button>
+      <Text layoutX="29.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="add a new  training" wrappingWidth="213.336669921875">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5555555555555556" centerY="0.48571428571428565" radius="0.5">
+               <stops>
+                  <Stop color="#fbfaff" />
+                  <Stop color="#0a5ed8" offset="0.7216494845360825" />
+                  <Stop color="#263d70" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <TextField fx:id="txt_cat" layoutX="180.0" layoutY="353.0" />
+   </children>
+</Pane>
