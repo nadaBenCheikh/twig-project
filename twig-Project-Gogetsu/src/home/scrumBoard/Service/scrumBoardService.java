@@ -45,19 +45,10 @@ public class scrumBoardService {
         }
         return null;
     }
-    public void delete(scrumBoard Board) {
-        String request="DELETE FROM scrumboard WHERE id ="+Board.getId();
-        try {
-            ste = cnx.getCnx().createStatement();
-            ste.executeUpdate(request);
-        } catch (SQLException ex) {
-            Logger.getLogger(scrumBoardService.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
     public boolean update(scrumBoard Board){
 
         try {
-            String req = "UPDATE scrumnotes SET description=?,title=? where id=?";
+            String req = "UPDATE scrumboard SET description=?,title=? where id=?";
 
             pst= Connexion.getCnx().prepareStatement(req, Statement.RETURN_GENERATED_KEYS);
             pst.setString(1, Board.getDescription());
@@ -78,7 +69,7 @@ public class scrumBoardService {
         return false;
     }
     public scrumBoard getsingle(int id) {
-        String request = "SELECT * from scrumboard where id="+id;
+        String request = "SELECT * from scrumboard where projectId="+id;
         try {
             ste = cnx.getCnx().createStatement();
             rs = ste.executeQuery(request);

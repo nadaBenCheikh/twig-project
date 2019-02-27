@@ -24,7 +24,7 @@
             <Insets right="-30.0" />
          </HBox.margin>
       </Label>
-      <ImageView fitHeight="80.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="myimage" fitHeight="80.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../image/avatar/01.jpg" />
          </image>

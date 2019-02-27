@@ -18,7 +18,7 @@
 
 <HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="112.0" prefWidth="695.0" spacing="80.0" style="-fx-background-color: #02030A; -fx-background-radius: 5; -fx-background-insets: 0;" stylesheets="@../style/msgs.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.chat.Controllers.singleMsgController">
     <children>
-      <ImageView fitHeight="80.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="myimage" fitHeight="80.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../image/avatar/03.jpg" />
          </image>

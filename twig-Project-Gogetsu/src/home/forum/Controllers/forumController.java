@@ -1,4 +1,12 @@
 package home.forum.Controllers;
+import com.jfoenix.controls.JFXButton;
+import home.forum.Service.PostsCommentsService;
+import home.forum.Service.PostsService;
+import home.forum.entity.CommentsForum;
+import home.forum.entity.PostsForum;
+import home.utils.UserInstance;
+import home.utils.entity.user;
+import home.utils.service.userService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,14 +15,22 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Paint;
+import javafx.util.Duration;
+import tray.notification.TrayNotification;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class forumController implements Initializable,linkForumController {
+    @FXML
+    private ImageView image;
+    @FXML
+    private JFXButton deletePostButton;
     @FXML
     private Label author;
     @FXML
@@ -25,15 +41,23 @@ public class forumController implements Initializable,linkForumController {
     private Label postedOn;
     @FXML
     private Button leftPane;
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     @FXML
     private Pane pnlCustomer;
 
     @FXML
     private VBox pnItems;
-
+    private user user1;
     private linkForumController linkForumController;
-
     public void setLinkForumController(linkForumController linkForumController) {
         this.linkForumController = linkForumController;
     }
@@ -74,7 +98,7 @@ public class forumController implements Initializable,linkForumController {
     void goBack(ActionEvent event) {
         linkForumController.goBack();
     }
-    public void addComment(int index,String comment,String name,String postedOn,String imagePath)
+    public void addComment(int id,int index,String comment,String name,String postedOn,String imagePath)
     {
         FXMLLoader fxmlLoader =new FXMLLoader(getClass().getResource("../fxml/comments.fxml"));
         try {
@@ -86,12 +110,18 @@ public class forumController implements Initializable,linkForumController {
         controller.setComment(comment);
         controller.setName(name);
         controller.setPostedOn(postedOn);
+        controller.setId(id);
         controller.setPicture(new Image(getClass().getResourceAsStream(imagePath)));
+        if (name.equals(UserInstance.getUser1().getFirstName()+" "+UserInstance.getUser1().getLastName()))
+            controller.enableDelete();
     }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        addComment(pnItems.getChildren().size(),"aaaaaaa","mon3im","23/05/2018","../../image/avatar/02.jpg");
+    public void getComments(){
+        PostsCommentsService postsCommentsService = new PostsCommentsService();
+        userService userService = new userService();
+        for (CommentsForum c: postsCommentsService.getAll(id)) {
+            System.out.println(userService.get(c.getIdUser()).getPicturePath());
+            addComment(c.getId(),pnItems.getChildren().size(),c.getCommentaire(),c.getFullName(),c.getDate(),"../../"+userService.get(c.getIdUser()).getPicturePath());
+        }
         FXMLLoader fxmlLoader1 =new FXMLLoader(getClass().getResource("../fxml/sendComment.fxml"));
         try {
             pnItems.getChildren().add(fxmlLoader1.load());
@@ -99,12 +129,37 @@ public class forumController implements Initializable,linkForumController {
             e.printStackTrace();
         }
         commentsController controller1 = fxmlLoader1.<commentsController>getController();
+        //System.out.println("../../"+UserInstance.getUser1().getPicturePath());
+        controller1.setMyPicture(new Image(getClass().getResourceAsStream("../../"+UserInstance.getUser1().getPicturePath())));
         controller1.setLinkForumController(this);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        user1 = UserInstance.getUser1();
+        deletePostButton.setDisable(false);
     }
     @Override
     public void addCommentToUi(String comment,String name,String postedOn)
     {
-        System.out.println(comment);
-        addComment(pnItems.getChildren().size()-1,comment,name,postedOn,"../../image/avatar/01.jpg");
+        user1.getPicturePath();
+        PostsCommentsService postsCommentsService =new PostsCommentsService();
+        CommentsForum commentsForum =postsCommentsService.insert(new CommentsForum(user1.getId(),comment,postedOn,id));
+        addComment(commentsForum.getId(),pnItems.getChildren().size()-1,comment,name,postedOn,"../../"+user1.getPicturePath());
+    }
+    @FXML
+    void deletePost(ActionEvent event) {
+        PostsService postsService = new PostsService();
+        postsService.delete(id);
+        linkForumController.setPosts();
+        linkForumController.goBack();
+        Image whatsAppImg = new Image("https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/whatsapp-128.png");
+        TrayNotification tray = new TrayNotification();
+        tray.setImage(whatsAppImg);
+        tray.setRectangleFill(Paint.valueOf("#2A9A84"));
+        tray.setTitle("sucess");
+        tray.setMessage("suppression avec succes");
+        tray.showAndDismiss(Duration.seconds(2));
+        //System.out.println(id);
     }
 }

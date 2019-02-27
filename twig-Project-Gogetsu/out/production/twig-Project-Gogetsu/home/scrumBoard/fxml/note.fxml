@@ -22,6 +22,6 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <Button fx:id="noteButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#editAction" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="noteButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#editAction" onDragDetected="#dragDetected" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: transparent;" />
    </children>
 </AnchorPane>

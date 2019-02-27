@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.text.*?>
 <?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.scene.image.*?>
@@ -28,7 +29,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <ImageView fitHeight="72.0" fitWidth="101.0" layoutX="646.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="image" fitHeight="72.0" fitWidth="101.0" layoutX="646.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../image/avatar/03.jpg" />
          </image>
@@ -73,5 +74,10 @@
             </VBox>
          </content>
       </ScrollPane>
+      <JFXButton fx:id="deletePostButton" disable="true" layoutX="526.0" layoutY="16.0" onAction="#deletePost" prefHeight="37.0" prefWidth="103.0" ripplerFill="WHITE" style="-fx-background-color: #FF0404;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
    </children>
 </Pane>

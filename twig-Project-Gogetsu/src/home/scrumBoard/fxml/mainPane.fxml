@@ -19,22 +19,31 @@
                <items>
                   <ScrollPane prefHeight="480.0" prefWidth="253.0" style="-fx-background-color: #02030A;">
                      <content>
-                        <VBox fx:id="pnItems1" prefHeight="480.0" prefWidth="253.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                        <VBox fx:id="pnItems1" onDragDropped="#onDragDropped" onDragOver="#onDragOver" prefHeight="480.0" prefWidth="253.0" spacing="5.0" style="-fx-background-color: #02030A;">
                            <padding>
                               <Insets bottom="5.0" left="45.0" right="5.0" top="5.0" />
                            </padding>
                         </VBox>
                      </content>
                   </ScrollPane>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="199.0" />
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="199.0">
+                     <children>
+                        <VBox fx:id="pnItems11" onDragDropped="#onDragDropped" onDragOver="#onDragOver" prefHeight="480.0" prefWidth="253.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="45.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children></AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox fx:id="pnItems111" onDragDropped="#onDragDropped" onDragOver="#onDragOver" prefHeight="480.0" prefWidth="253.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="45.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children></AnchorPane>
                </items>
             </SplitPane>
-            <Label layoutX="22.0" layoutY="14.0" text=" scrum board" textFill="#e7e5e5">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
             <Label layoutX="70.0" layoutY="57.0" text="To Do" textFill="#2a73ff">
                <font>
                   <Font name="System Bold" size="26.0" />
@@ -55,13 +64,23 @@
                   <Font size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="708.0" layoutY="13.0" ripplerFill="WHITE" style="-fx-background-color: #2A73FF;" text="Empty" textFill="WHITE">
+            <JFXButton fx:id="organizeButton" layoutX="708.0" layoutY="13.0" onAction="#organize" ripplerFill="WHITE" style="-fx-background-color: #2A73FF;" text="Organize" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </JFXButton>
             <FontAwesomeIcon fill="#ff0404" iconName="PLUS_CIRCLE" layoutX="537.0" layoutY="44.0" size="3em" />
             <FontAwesomeIcon fill="#2a73ff" iconName="RECYCLE" layoutX="664.0" layoutY="44.0" size="3em" />
+            <TextField fx:id="title" layoutX="21.0" layoutY="5.0" prefHeight="54.0" prefWidth="234.0" style="-fx-background-color: transparent; -fx-text-fill: #e7e5e5;" text=" scrum board">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="description" layoutX="298.0" prefHeight="54.0" prefWidth="194.0" style="-fx-background-color: transparent; -fx-text-fill: #d00d0d;" text=" scrum board">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
          </children>
       </Pane>
    </children>

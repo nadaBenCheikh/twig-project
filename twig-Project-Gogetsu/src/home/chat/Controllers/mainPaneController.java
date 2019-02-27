@@ -1,5 +1,7 @@
 package home.chat.Controllers;
 
+import home.utils.entity.user;
+import home.utils.service.userService;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -63,8 +66,9 @@ public class mainPaneController implements MsgListener, Initializable {
     @Override
     public void publish(String test) throws IOException {
         FXMLLoader loader;
+        userService userService = new userService();
         JSONObject received = new JSONObject(test);
-        System.out.println(received.getInt("user_id"));
+        user u = userService.get(received.getInt("user_id"));
         if (received.getInt("user_id")== id) {
             loader = new FXMLLoader(getClass().getResource("../fxml/MyMsg.fxml"));
         }
@@ -77,6 +81,7 @@ public class mainPaneController implements MsgListener, Initializable {
                     Parent root = loader.load();
                     singleMsgController controller = loader.<singleMsgController>getController();
                     controller.setMessage(received.getString("text"));
+                    controller.setMyimage(new Image(getClass().getResourceAsStream("../../"+u.getPicturePath())));
                     pnItems.getChildren().add(root);
                 } catch (IOException e) {
                     e.printStackTrace();

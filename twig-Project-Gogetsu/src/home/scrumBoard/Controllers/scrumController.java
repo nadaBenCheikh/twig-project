@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -20,7 +21,7 @@ import java.io.IOException;
 import java.util.Date;
 
 
-public class scrumController {
+public class scrumController  {
     @FXML
     private Button noteButton;
 
@@ -60,6 +61,20 @@ public class scrumController {
         });
         stage.showAndWait();
         }
+    }
+
+
+    @FXML
+    void dragDetected(MouseEvent event) {
+        Dragboard db = noteButton.startDragAndDrop(TransferMode.MOVE);
+        ClipboardContent cb = new ClipboardContent();
+        cb.put(scrumNotes.DATA_FORMAT,scrumNote);
+        db.setContent(cb);
+
+        event.consume();
+        AnchorPane pane =((AnchorPane)noteButton.getParent());
+        pane.getChildren().clear();
+
     }
 
 }

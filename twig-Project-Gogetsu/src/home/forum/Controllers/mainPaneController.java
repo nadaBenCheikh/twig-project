@@ -1,6 +1,12 @@
 package home.forum.Controllers;
 
+import com.jfoenix.controls.JFXButton;
+import home.Controller;
+import home.forum.Service.PostsService;
 import home.forum.entity.PostsForum;
+import home.utils.Connexion;
+import home.utils.UserInstance;
+import home.utils.entity.user;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,8 +21,10 @@ import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
@@ -26,6 +34,8 @@ import javafx.scene.layout.Pane;
 
 public class mainPaneController implements Initializable,linkForumController {
 
+    @FXML
+    private JFXButton addPostButton;
 
     @FXML
     private Pane pnlCustomer11;
@@ -37,13 +47,13 @@ public class mainPaneController implements Initializable,linkForumController {
     @FXML private TableColumn<PostsForum, String> category;
     @FXML private TableColumn<PostsForum, String> subject;
     @FXML private TableColumn<PostsForum, String> description;
-    @FXML private TableColumn<PostsForum, LocalDate> postedOn;
-
+    @FXML private TableColumn<PostsForum, Date> postedOn;
+    @FXML private TableColumn<PostsForum, Integer> id;
     @FXML
     void clickItem(MouseEvent event) {
-        System.out.println(tableView.getSelectionModel().getSelectedItem().getSubject());
-        System.out.println(tableView.getSelectionModel().getSelectedItem().getDescription());
-        System.out.println(tableView.getSelectionModel().getSelectedItem().getCategory());
+        PostsService postsService = new PostsService();
+        PostsForum postsForum;
+        String FullName =postsService.getsingle(tableView.getSelectionModel().getSelectedItem().getId());
         try {
             FXMLLoader fxmlLoader =new FXMLLoader(getClass().getResource("../fxml/post.fxml"));
             pnlCustomer11.getChildren().add(fxmlLoader.load());
@@ -52,6 +62,9 @@ public class mainPaneController implements Initializable,linkForumController {
             controller.setSubject("Subject: "+tableView.getSelectionModel().getSelectedItem().getSubject());
             controller.setDescription(tableView.getSelectionModel().getSelectedItem().getDescription());
             controller.setPostedOn("Posted on: "+tableView.getSelectionModel().getSelectedItem().getPostedOn().toString());
+            controller.setAuthor(FullName);
+            controller.setId(tableView.getSelectionModel().getSelectedItem().getId());
+            controller.getComments();
             //all info jibhom mil DB w zid author fil table mta3 il info
         } catch (IOException e) {
             e.printStackTrace();
@@ -59,24 +72,43 @@ public class mainPaneController implements Initializable,linkForumController {
         pnlCustomer11.toFront();
 
     }
-
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("yoooo");
+    public void setPosts()
+    {
         category.setCellValueFactory(new PropertyValueFactory<PostsForum, String>("category"));
         subject.setCellValueFactory(new PropertyValueFactory<PostsForum, String>("subject"));
-        postedOn.setCellValueFactory(new PropertyValueFactory<PostsForum, LocalDate>("postedOn"));
+        postedOn.setCellValueFactory(new PropertyValueFactory<PostsForum, Date>("postedOn"));
         description.setCellValueFactory(new PropertyValueFactory<PostsForum, String>("description"));
+        id.setCellValueFactory(new PropertyValueFactory<PostsForum, Integer>("id"));
         //load dummy data
         tableView.setItems(getPeople());
     }
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        setPosts();
+    }
     public ObservableList<PostsForum> getPeople()
     {
-        ObservableList<PostsForum> people = FXCollections.observableArrayList();
-        people.add(new PostsForum("Frank","Sinatra","oy",LocalDate.of(1915, Month.DECEMBER, 12) ));
-        people.add(new PostsForum("Rebecca","Fergusson","oy",LocalDate.of(1986, Month.JULY, 21)));
-        people.add(new PostsForum("Mr.","T","oy",LocalDate.of(1952, Month.MAY, 21)));
+        PostsService postsService = new PostsService();
+        ObservableList<PostsForum> people = FXCollections.observableArrayList(postsService.getAll());
+        for ( PostsForum p: people) {
+            System.out.println(p);
+        }
         return people;
+    }
+    @FXML
+    void addModal(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader =new FXMLLoader(getClass().getResource("../fxml/addpost.fxml"));
+            pnlCustomer11.getChildren().add(fxmlLoader.load());
+            forumAddController controller = fxmlLoader.<forumAddController>getController();
+            controller.setLinkForumController(this);
+            //all info jibhom mil DB w zid author fil table mta3 il info
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        pnlCustomer11.toFront();
+
     }
     @Override
     public void goBack() {

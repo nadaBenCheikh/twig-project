@@ -25,13 +25,14 @@ public class scrumNotesService {
     public scrumNotes insert(scrumNotes notes)
     {
         try {
-            String req = "INSERT INTO scrumnotes (description,postedDate,userId,title) values(?,?,?,?)";
+            String req = "INSERT INTO scrumnotes (description,postedDate,userId,title,scrumboardId) values(?,?,?,?,?)";
 
             pst= Connexion.getCnx().prepareStatement(req, Statement.RETURN_GENERATED_KEYS);
             pst.setString(1, notes.getDescription());
             pst.setString(2, notes.getPostedOn());
             pst.setInt(3, 5);
             pst.setString(4, notes.getTitle());
+            pst.setInt(5,notes.getScrumboardId());
 
             if(pst.executeUpdate()==1){
                 rs = pst.getGeneratedKeys();
@@ -79,14 +80,36 @@ public class scrumNotesService {
         }
         return false;
     }
-    public List<scrumNotes> getAll() {
-        String request = "SELECT * from personne";
+    public boolean updatestate(scrumNotes notes){
+
+        try {
+            String req = "UPDATE scrumnotes SET state=? where id=?";
+
+            pst= Connexion.getCnx().prepareStatement(req, Statement.RETURN_GENERATED_KEYS);
+            pst.setString(1, notes.getState());
+            pst.setInt(2, notes.getId());
+
+            if(pst.executeUpdate()==1){
+                rs = pst.getGeneratedKeys();
+                if (rs.next()) {
+                    notes.setId(rs.getInt(1));
+                }
+                return true;
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return false;
+    }
+    public List<scrumNotes> getAll(int id) {
+        String request = "SELECT * from scrumnotes where scrumboardId="+id;
         List<scrumNotes> list = new ArrayList<>();
         try {
             ste = cnx.getCnx().createStatement();
             rs = ste.executeQuery(request);
             while (rs.next()){
-                list.add(new scrumNotes(rs.getInt("id"), rs.getString("nom"), rs.getString("prenom"),new Date().toString(),5));
+                list.add(new scrumNotes(rs.getInt("id"), rs.getString("title"), rs.getString("description"),rs.getString("postedDate"),rs.getInt("userId"),rs.getInt("scrumboardId"),rs.getString("state")));
             }
         } catch (SQLException ex) {
             Logger.getLogger(scrumNotesService.class.getName()).log(Level.SEVERE, null, ex);

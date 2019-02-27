@@ -1,9 +1,11 @@
 package home;
 
+import home.utils.UserInstance;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -12,6 +14,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        /*UserInstance userInstance = UserInstance.getInstance("bassem.gharbi@esprit.tn","123456");
         Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
         primaryStage.setScene(new Scene(root));
         //set stage borderless
@@ -28,6 +31,12 @@ public class Main extends Application {
             primaryStage.setY(event.getScreenY() - y);
 
         });
+        primaryStage.show();*/
+        Parent root = FXMLLoader.load(getClass().getResource("login/fxml/Main.fxml"));
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 
