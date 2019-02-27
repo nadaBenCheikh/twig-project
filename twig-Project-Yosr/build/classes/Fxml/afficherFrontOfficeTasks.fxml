@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherFrontTasks">
+   <children>
+      <ScrollPane layoutX="34.0" layoutY="106.0" prefHeight="318.0" prefWidth="711.0">
+         <content>
+            <VBox fx:id="vbTasks" prefHeight="304.0" prefWidth="711.0" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="btnRetour" layoutY="476.0" mnemonicParsing="false" onAction="#redirect" opacity="0.0" prefHeight="70.0" prefWidth="85.0" />
+      <ImageView fitHeight="25.0" fitWidth="74.0" layoutX="8.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/retourr.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

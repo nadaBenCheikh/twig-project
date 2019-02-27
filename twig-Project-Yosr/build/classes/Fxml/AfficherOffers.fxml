@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fxml.AfficherOffersController">
+   <children>
+      <TableView fx:id="table" layoutX="23.0" layoutY="85.0" onMouseClicked="#deleteClick" prefHeight="200.0" prefWidth="571.0">
+        <columns>
+          <TableColumn fx:id="taskTitleColumn" prefWidth="75.0" text="Task Title" />
+          <TableColumn fx:id="ProjectTitleColumn" prefWidth="75.0" text="Project Title" />
+            <TableColumn fx:id="BIDColumn" prefWidth="123.0" text="estimated price (dt)" />
+            <TableColumn fx:id="DurationColumn" minWidth="8.0" prefWidth="102.0" text="Duration (days)" />
+            <TableColumn fx:id="IdOfferColumn" minWidth="0.0" prefWidth="63.0" text="id offer" />
+            <TableColumn fx:id="TaskIDColumn" minWidth="0.0" prefWidth="62.0" text="Task id" />
+            <TableColumn fx:id="ProjectIDColumn" minWidth="0.0" prefWidth="63.0" text="Project id" />
+        </columns>
+      </TableView>
+      <Button fx:id="cancelBtn" layoutX="432.0" layoutY="311.0" mnemonicParsing="false" onAction="#deleteOffer" text="Cancel Application" />
+      <Label layoutX="120.0" layoutY="36.0" text="My Applications " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="recommandBtn" layoutX="300.0" layoutY="311.0" mnemonicParsing="false" onAction="#redirectToRecommandFriend" text="Recommand" />
+   </children>
+</Pane>

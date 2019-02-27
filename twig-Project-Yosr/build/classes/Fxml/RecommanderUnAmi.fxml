@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fxml.RecommanderUnAmiController">
+   <children>
+      <Label layoutX="76.0" layoutY="37.0" text="Recommend a task to a friend" textFill="ORANGERED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchName" layoutX="76.0" layoutY="87.0" promptText="Name" />
+      <Button fx:id="search_Btn" layoutX="458.0" layoutY="87.0" mnemonicParsing="false" onAction="#filterResults" text="Filter results" />
+      <TextField layoutX="76.0" layoutY="525.0" promptText="taskId" />
+      <TextField layoutX="236.0" layoutY="525.0" promptText="projectId" />
+      <ScrollPane layoutX="74.0" layoutY="130.0" prefHeight="350.0" prefWidth="614.0">
+         <content>
+            <VBox fx:id="amisVB" prefHeight="342.0" prefWidth="590.0" spacing="20.0">
+               <padding>
+                  <Insets bottom="8.0" left="20.0" right="20.0" top="8.0" />
+               </padding></VBox>
+         </content>
+      </ScrollPane>
+      <CheckBox fx:id="is_coworker" layoutX="292.0" layoutY="90.0" mnemonicParsing="false" text="Coworker" textFill="ORANGERED">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </CheckBox>
+   </children>
+</Pane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="667.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fxml.PostulerController">
+   <children>
+      <TextField fx:id="apply_title" layoutX="236.0" layoutY="141.0" />
+      <TextField fx:id="apply_description" layoutX="236.0" layoutY="184.0" />
+      <TextField fx:id="apply_category" layoutX="236.0" layoutY="234.0" />
+      <Label layoutX="187.0" layoutY="66.0" prefHeight="31.0" prefWidth="235.0" text="Apply for a project" textFill="#f28b38">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="apply_button" layoutX="273.0" layoutY="491.0" mnemonicParsing="false" style="-fx-background-color: orange;" text="Apply" textFill="#f56600" />
+      <Label layoutX="173.0" layoutY="143.0" prefHeight="17.0" prefWidth="34.0" text="Title" textFill="#f2ecec">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="162.0" layoutY="238.0" text="Category" textFill="WHITE" />
+      <Label layoutX="156.0" layoutY="188.0" text="Description" textFill="WHITE" />
+      <TextField fx:id="apply_bid" layoutX="236.0" layoutY="275.0" />
+      <TextField fx:id="apply_estimatedDuration" layoutX="236.0" layoutY="322.0" />
+      <Label layoutX="149.0" layoutY="279.0" text="estimated price" textFill="WHITE" />
+      <Label layoutX="133.0" layoutY="326.0" text="estimated duration" textFill="WHITE" />
+      <Label layoutX="138.0" layoutY="380.0" text="Motivation Letter" textFill="#f2f2f2" />
+      <TextField fx:id="textArea_idTask" layoutX="446.0" layoutY="530.0" visible="false" />
+      <TextField fx:id="textArea_idProject" layoutX="287.0" layoutY="530.0" visible="false" />
+      <TextArea fx:id="apply_motivationLetter" layoutX="236.0" layoutY="371.0" prefHeight="92.0" prefWidth="149.0" />
+      <Label fx:id="errormsg1" layoutX="408.0" layoutY="280.0" prefHeight="20.0" prefWidth="241.0" textFill="#f20000">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="errormsg2" layoutX="408.0" layoutY="326.0" prefHeight="20.0" prefWidth="241.0" textFill="#f20000">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="errormsg3" layoutX="408.0" layoutY="379.0" prefHeight="20.0" prefWidth="241.0" textFill="#f20000">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+   </children>
+   <padding>
+      <Insets left="10.0" />
+   </padding>
+</Pane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Controller">
+   <children>
+      <Text fill="#ab991a" layoutX="115.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="add friends to the referal list (recommandations)">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <TableView layoutX="177.0" layoutY="210.0" prefHeight="200.0" prefWidth="378.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="id" />
+          <TableColumn prefWidth="75.0" text="id user" />
+            <TableColumn prefWidth="75.0" text="id friend" />
+            <TableColumn prefWidth="75.0" text="coworker" />
+            <TableColumn prefWidth="75.0" text="close friend" />
+        </columns>
+      </TableView>
+      <Button layoutX="628.0" layoutY="265.0" mnemonicParsing="false" text="Button" />
+   </children>
+</Pane>

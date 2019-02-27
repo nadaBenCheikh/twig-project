@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fxml.BarChartController">
+   <children>
+      <BarChart fx:id="OffersChart" layoutX="12.0" layoutY="128.0" prefHeight="400.0" prefWidth="771.0" title="categories / Number of applications">
+        <xAxis>
+          <CategoryAxis label="categories" side="BOTTOM" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" label="number of applications" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Button fx:id="btnRetour" layoutX="68.0" layoutY="536.0" mnemonicParsing="false" onAction="#redirect" prefHeight="25.0" prefWidth="53.0" text="back" />
+   </children>
+</Pane>
