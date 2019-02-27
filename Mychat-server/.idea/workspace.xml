@@ -2,69 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea123b0d-2a69-4b35-91bf-5c1a5c58ab96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/Service/PostsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/utils/entity/user.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/.idea/libraries/TrayNotification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/.idea/libraries/TrayNotification.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/.idea/libraries/fontawesomefx_8_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/.idea/libraries/fontawesomefx_8_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/.idea/libraries/jfoenix_8_0_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/.idea/libraries/jfoenix_8_0_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/.idea/libraries/json_20180813.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/.idea/libraries/json_20180813.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/Home.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/chat/Controllers/mainPaneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/chat/Controllers/mainPaneController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/chat/Controllers/mainPaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/chat/Controllers/mainPaneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/chat/Controllers/singleMsgController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/chat/Controllers/singleMsgController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/chat/fxml/HisMsg.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/chat/fxml/HisMsg.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/chat/fxml/MyMsg.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/chat/fxml/MyMsg.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/Controllers/commentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/Controllers/commentsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/Controllers/forumController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/Controllers/forumController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/Controllers/linkForumController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/Controllers/linkForumController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/Controllers/mainPaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/Controllers/mainPaneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/Service/PostsCommentsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/Service/PostsCommentsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/entity/CommentsForum.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/entity/CommentsForum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/entity/PostsForum.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/entity/PostsForum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/fxml/comments.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/fxml/comments.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/fxml/mainPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/fxml/mainPane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/fxml/post.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/fxml/post.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/fxml/sendComment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/fxml/sendComment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/Service/PostsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/forum/Service/PostsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/login/Controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/login/Controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/login/Controller/signIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/login/Controller/signIn.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Controllers/mainPaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Controllers/mainPaneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Controllers/scrumAddController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Controllers/scrumAddController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Controllers/scrumController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Controllers/scrumController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Controllers/scrumEditController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Controllers/scrumEditController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Entity/scrumNotes.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Entity/scrumNotes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Service/scrumBoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Service/scrumBoardService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Service/scrumNotesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/Service/scrumNotesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/fxml/mainPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/fxml/mainPane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/fxml/note.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/scrumBoard/fxml/note.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/out/production/twig-Project-Gogetsu/home/utils/UserInstance.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/Home.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/chat/Controllers/mainPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/chat/Controllers/mainPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/chat/Controllers/singleMsgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/chat/Controllers/singleMsgController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/chat/fxml/HisMsg.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/chat/fxml/HisMsg.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/chat/fxml/MyMsg.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/chat/fxml/MyMsg.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/Controllers/commentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/Controllers/commentsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/Controllers/forumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/Controllers/forumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/Controllers/linkForumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/Controllers/linkForumController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/Controllers/mainPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/Controllers/mainPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/Service/PostsCommentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/Service/PostsCommentsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/entity/CommentsForum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/entity/CommentsForum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/entity/PostsForum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/entity/PostsForum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/fxml/comments.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/fxml/comments.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/fxml/mainPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/fxml/mainPane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/fxml/post.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/fxml/post.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/fxml/sendComment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/fxml/sendComment.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Controllers/mainPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Controllers/mainPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Controllers/scrumAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Controllers/scrumAddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Controllers/scrumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Controllers/scrumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Controllers/scrumEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Controllers/scrumEditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Entity/scrumNotes.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Entity/scrumNotes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Service/scrumBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Service/scrumBoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Service/scrumNotesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/Service/scrumNotesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/fxml/mainPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/fxml/mainPane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/fxml/note.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/scrumBoard/fxml/note.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/Service/PostsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/forum/Service/PostsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/login/Controller/signIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/login/Controller/signIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/src/home/utils/UserInstance.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../twig-Project-Gogetsu/twig-Project-Gogetsu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../twig-Project-Gogetsu/twig-Project-Gogetsu.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -129,7 +92,8 @@
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.53" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.85" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
     </session>
@@ -191,10 +155,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="189" />
-    <option name="y" value="26" />
+    <option name="x" value="139" />
+    <option name="y" value="29" />
     <option name="width" value="1378" />
-    <option name="height" value="743" />
+    <option name="height" value="734" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -283,16 +247,17 @@
       <workItem from="1550598458362" duration="3969000" />
       <workItem from="1550935422141" duration="1224000" />
       <workItem from="1551109877311" duration="4869000" />
+      <workItem from="1551282588182" duration="624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33341000" />
+    <option name="totallyTimeSpent" value="33965000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2753404" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27987897" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />

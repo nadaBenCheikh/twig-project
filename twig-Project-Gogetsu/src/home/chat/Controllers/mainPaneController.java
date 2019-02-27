@@ -81,7 +81,8 @@ public class mainPaneController implements MsgListener, Initializable {
                     Parent root = loader.load();
                     singleMsgController controller = loader.<singleMsgController>getController();
                     controller.setMessage(received.getString("text"));
-                    controller.setMyimage(new Image(getClass().getResourceAsStream("../../"+u.getPicturePath())));
+                    System.out.println(u.getPicturePath());
+                   controller.setMyimage(new Image(getClass().getResourceAsStream("../../image/"+u.getPicturePath())));
                     pnItems.getChildren().add(root);
                 } catch (IOException e) {
                     e.printStackTrace();

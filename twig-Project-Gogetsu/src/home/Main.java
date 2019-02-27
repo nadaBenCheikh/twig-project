@@ -1,6 +1,5 @@
 package home;
 
-import home.utils.UserInstance;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,28 +13,16 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        /*UserInstance userInstance = UserInstance.getInstance("bassem.gharbi@esprit.tn","123456");
-        Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
-        primaryStage.setScene(new Scene(root));
-        //set stage borderless
-        primaryStage.initStyle(StageStyle.UNDECORATED);
 
-        //drag it here
-        root.setOnMousePressed(event -> {
-            x = event.getSceneX();
-            y = event.getSceneY();
-        });
-        root.setOnMouseDragged(event -> {
-
-            primaryStage.setX(event.getScreenX() - x);
-            primaryStage.setY(event.getScreenY() - y);
-
-        });
-        primaryStage.show();*/
-        Parent root = FXMLLoader.load(getClass().getResource("login/fxml/Main.fxml"));
+        /*Parent root = FXMLLoader.load(getClass().getResource("login/fxml/Main.fxml"));
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         primaryStage.initStyle(StageStyle.TRANSPARENT);
+        primaryStage.setScene(scene);
+        primaryStage.show();*/
+        Parent root= FXMLLoader.load(getClass().getResource("Login1/Fxml/mainPane_4.fxml"));
+        Scene scene = new Scene(root);
+        primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

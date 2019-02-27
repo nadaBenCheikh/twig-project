@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.Login1.controllers.UpdateController">
+   <children>
+      <Label layoutX="56.0" layoutY="128.0" text="languages" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font></Label>
+      <Label layoutX="72.0" layoutY="26.0" text="PROFESIONAL INFORMATION" textFill="#686464">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="61.0" fitWidth="57.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/étoile-blanche-png-2.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="languages" layoutX="202.0" layoutY="126.0" promptText="languages" />
+      <TextField fx:id="minHourlyFee" layoutX="202.0" layoutY="184.0" promptText="minHourlyFee" />
+      <TextField fx:id="gender" layoutX="202.0" layoutY="237.0" promptText="gender" />
+      <TextField fx:id="CvLink" layoutX="202.0" layoutY="296.0" promptText="CvLink" />
+      <TextField fx:id="maxHourlyFee" layoutX="202.0" layoutY="356.0" promptText="maxHourlyFee" />
+      <TextField fx:id="ranking" layoutX="202.0" layoutY="421.0" promptText="ranking" />
+      <Label layoutX="56.0" layoutY="186.0" text="minHourlyFee" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="239.0" text="gender" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="298.0" text="CvLink" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="358.0" text="maxHourlyFee" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="423.0" text="ranking" textFill="#db3907">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="update" layoutX="527.0" layoutY="433.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #66ACAE; -fx-background-radius: 10,10,10,10; -fx-pref-width: 100px;" text="update" textFill="#171717" />
+   </children>
+</Pane>

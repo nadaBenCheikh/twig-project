@@ -17,7 +17,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.Controller">
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.Controller">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -33,7 +33,7 @@
                   <Insets bottom="20.0" />
                </VBox.margin>
             </Label>
-            <Button fx:id="btnOverview" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Overview" textFill="#e7e5e5">
+            <Button fx:id="btnOverview" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="profil" textFill="#e7e5e5">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -51,7 +51,7 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Button fx:id="btnOrders" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Orders">
+            <Button fx:id="btnOrders" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="projects">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -63,7 +63,7 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Button fx:id="btnCustomers" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Customers">
+            <Button fx:id="btnCustomers" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="coworking/forum">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -75,7 +75,7 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Button fx:id="btnMenus" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Menus">
+            <Button fx:id="btnMenus" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="events">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -130,7 +130,14 @@
             <Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" stylesheets="@chat/style/arrows.css" />
             <Pane fx:id="pnlMenus" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #02030A;" stylesheets="@scrumBoard/style/skrum.css" />
             <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0" />
-            <Pane fx:id="pnlCustomer" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #02030A;" />
+            <Pane fx:id="pnlCustomer" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #02030A;">
+               <children>
+                  <Text fill="WHITE" layoutX="73.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projet integration" wrappingWidth="429.13671875">
+                     <font>
+                        <Font size="73.0" />
+                     </font>
+                  </Text>
+               </children></Pane>
          </children>
       </StackPane>
    </children>

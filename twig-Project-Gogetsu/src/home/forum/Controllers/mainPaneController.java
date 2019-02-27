@@ -1,12 +1,8 @@
 package home.forum.Controllers;
 
 import com.jfoenix.controls.JFXButton;
-import home.Controller;
 import home.forum.Service.PostsService;
 import home.forum.entity.PostsForum;
-import home.utils.Connexion;
-import home.utils.UserInstance;
-import home.utils.entity.user;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -22,15 +18,7 @@ import javafx.scene.layout.Pane;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
-import java.time.LocalDate;
-import java.time.Month;
-import java.util.List;
 import java.util.ResourceBundle;
-
-import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.layout.Pane;
 
 public class mainPaneController implements Initializable,linkForumController {
 

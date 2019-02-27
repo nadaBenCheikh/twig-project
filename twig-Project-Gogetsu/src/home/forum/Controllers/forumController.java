@@ -3,9 +3,6 @@ import com.jfoenix.controls.JFXButton;
 import home.forum.Service.PostsCommentsService;
 import home.forum.Service.PostsService;
 import home.forum.entity.CommentsForum;
-import home.forum.entity.PostsForum;
-import home.utils.UserInstance;
-import home.utils.entity.user;
 import home.utils.service.userService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,6 +22,8 @@ import tray.notification.TrayNotification;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static home.Login1.controllers.loginController.userConnect;
 
 public class forumController implements Initializable,linkForumController {
     @FXML
@@ -56,7 +55,6 @@ public class forumController implements Initializable,linkForumController {
 
     @FXML
     private VBox pnItems;
-    private user user1;
     private linkForumController linkForumController;
     public void setLinkForumController(linkForumController linkForumController) {
         this.linkForumController = linkForumController;
@@ -112,7 +110,7 @@ public class forumController implements Initializable,linkForumController {
         controller.setPostedOn(postedOn);
         controller.setId(id);
         controller.setPicture(new Image(getClass().getResourceAsStream(imagePath)));
-        if (name.equals(UserInstance.getUser1().getFirstName()+" "+UserInstance.getUser1().getLastName()))
+        if (name.equals(userConnect.getFirstName()+" "+userConnect.getLastName()))
             controller.enableDelete();
     }
     public void getComments(){
@@ -120,7 +118,7 @@ public class forumController implements Initializable,linkForumController {
         userService userService = new userService();
         for (CommentsForum c: postsCommentsService.getAll(id)) {
             System.out.println(userService.get(c.getIdUser()).getPicturePath());
-            addComment(c.getId(),pnItems.getChildren().size(),c.getCommentaire(),c.getFullName(),c.getDate(),"../../"+userService.get(c.getIdUser()).getPicturePath());
+            addComment(c.getId(),pnItems.getChildren().size(),c.getCommentaire(),c.getFullName(),c.getDate(),"../../image/"+userService.get(c.getIdUser()).getPicturePath());
         }
         FXMLLoader fxmlLoader1 =new FXMLLoader(getClass().getResource("../fxml/sendComment.fxml"));
         try {
@@ -130,22 +128,20 @@ public class forumController implements Initializable,linkForumController {
         }
         commentsController controller1 = fxmlLoader1.<commentsController>getController();
         //System.out.println("../../"+UserInstance.getUser1().getPicturePath());
-        controller1.setMyPicture(new Image(getClass().getResourceAsStream("../../"+UserInstance.getUser1().getPicturePath())));
+        //controller1.setMyPicture(new Image(getClass().getResourceAsStream("../../"+userConnect.getPicturePath())));
         controller1.setLinkForumController(this);
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        user1 = UserInstance.getUser1();
         deletePostButton.setDisable(false);
     }
     @Override
     public void addCommentToUi(String comment,String name,String postedOn)
     {
-        user1.getPicturePath();
         PostsCommentsService postsCommentsService =new PostsCommentsService();
-        CommentsForum commentsForum =postsCommentsService.insert(new CommentsForum(user1.getId(),comment,postedOn,id));
-        addComment(commentsForum.getId(),pnItems.getChildren().size()-1,comment,name,postedOn,"../../"+user1.getPicturePath());
+        CommentsForum commentsForum =postsCommentsService.insert(new CommentsForum(userConnect.getId(),comment,postedOn,id));
+        addComment(commentsForum.getId(),pnItems.getChildren().size()-1,comment,name,postedOn,"../../image/"+userConnect.getPicturePath());
     }
     @FXML
     void deletePost(ActionEvent event) {
