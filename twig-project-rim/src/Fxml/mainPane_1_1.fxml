@@ -18,27 +18,27 @@
    <children>
       <TextField fx:id="txt_score" layoutX="153.0" layoutY="94.0" />
       <TextField fx:id="txt_duree" layoutX="153.0" layoutY="146.0" />
-      <Text fill="#aaabab" layoutX="44.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="score" wrappingWidth="77.603515625">
+      <Text fill="#aaabab" layoutX="29.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="score" wrappingWidth="77.603515625">
          <font>
             <Font name="Britannic Bold" size="18.0" />
          </font>
       </Text>
-      <Text fill="#aaabab" layoutX="48.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="duree">
+      <Text fill="#aaabab" layoutX="28.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="duree">
          <font>
             <Font name="Britannic Bold" size="18.0" />
          </font>
       </Text>
-      <Text fill="#aaabab" layoutX="55.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="type">
+      <Text fill="#aaabab" layoutX="29.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="type">
          <font>
             <Font name="Britannic Bold" size="18.0" />
          </font>
       </Text>
-      <Text fill="#aaabab" layoutX="53.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom">
+      <Text fill="#aaabab" layoutX="26.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom">
          <font>
             <Font name="Britannic Bold" size="19.0" />
          </font>
       </Text>
-      <Text fill="#aaabab" layoutX="25.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="describtion">
+      <Text fill="#aaabab" layoutX="25.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="description">
          <font>
             <Font name="Britannic Bold" size="22.0" />
          </font>
@@ -49,21 +49,14 @@
             <Image url="@image/Sscolorlogo_lg.png" />
          </image>
       </ImageView>
-      <Button fx:id="ajout" layoutX="511.0" layoutY="484.0" mnemonicParsing="false" onAction="#ajouterTest" prefHeight="32.0" prefWidth="101.0" text="add" />
-      <Text layoutX="29.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="add a new test" wrappingWidth="213.336669921875">
+      <Button fx:id="ajout" layoutX="322.0" layoutY="510.0" mnemonicParsing="false" onAction="#ajouterTest" prefHeight="19.0" prefWidth="101.0" style="-fx-background-color: #66ACAE; -fx-background-radius: 10,10,10,10; -fx-pref-width: 100px;" text="add" />
+      <Text fill="#bf0909" layoutX="29.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="add a new test" wrappingWidth="213.336669921875">
          <font>
-            <Font size="24.0" />
+            <Font name="Britannic Bold" size="30.0" />
          </font>
-         <fill>
-            <RadialGradient centerX="0.4666666666666667" centerY="0.5" radius="0.5">
-               <stops>
-                  <Stop color="#212cd0" />
-                  <Stop color="#b2b8dd" offset="1.0" />
-               </stops>
-            </RadialGradient>
-         </fill>
       </Text>
       <TextField fx:id="txt_type" layoutX="153.0" layoutY="191.0" />
       <TextField fx:id="txt_describ" layoutX="153.0" layoutY="300.0" prefHeight="81.0" prefWidth="149.0" />
+      <Button fx:id="voirList" layoutX="443.0" layoutY="510.0" mnemonicParsing="false" onAction="#VoirListeTtest" style="-fx-background-color: #66ACAE; -fx-background-radius: 10,10,10,10; -fx-pref-width: 100px;" text="vew list" />
    </children>
 </Pane>

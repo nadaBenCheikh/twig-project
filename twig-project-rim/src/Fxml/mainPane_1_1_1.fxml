@@ -42,18 +42,10 @@
          </contextMenu>
       </TableView>
       <Button fx:id="delete" layoutX="622.0" layoutY="487.0" mnemonicParsing="false" onAction="#supprimer" style="-fx-background-color: #66ACAE; -fx-background-radius: 10,10,10,10; -fx-pref-width: 100px;" text="delete" />
-      <Label layoutX="23.0" layoutY="22.0" prefHeight="36.0" prefWidth="320.0" text="Training list">
+      <Label layoutX="23.0" layoutY="22.0" prefHeight="36.0" prefWidth="320.0" text="Training list" textFill="#d00808">
          <font>
             <Font name="Britannic Bold" size="36.0" />
          </font>
-         <textFill>
-            <RadialGradient centerX="0.13333333333333336" centerY="0.16666666666666669" radius="0.5">
-               <stops>
-                  <Stop color="WHITE" />
-                  <Stop color="#264672" offset="1.0" />
-               </stops>
-            </RadialGradient>
-         </textFill>
       </Label>
    </children>
 </Pane>

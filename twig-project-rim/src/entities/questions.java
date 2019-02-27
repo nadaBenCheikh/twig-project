@@ -24,6 +24,10 @@ public class questions {
         this.question = question;
         this.bonneRep = bonneRep;
     }
+      public questions( String bonneRep) {
+       
+        this.bonneRep = bonneRep;
+    }
      public questions(int id)
      {
          this.id=id;
