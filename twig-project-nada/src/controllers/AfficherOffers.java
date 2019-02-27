@@ -9,15 +9,21 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
+import javafx.util.Duration;
 import javax.swing.JOptionPane;
+import org.controlsfx.control.Notifications;
 import services.OffersService;
+
 
 public class AfficherOffers implements Initializable{
     boolean verif=false;
@@ -91,6 +97,12 @@ public class AfficherOffers implements Initializable{
     @FXML
     private TableColumn<OfferJoinCollab, Integer> durationO;
     
+    @FXML
+    private TableColumn<OfferJoinCollab, String> picturePath;
+    
+    @FXML
+    private MenuItem txtDetail;
+    
     ObservableList<OfferJoinCollab> ob;
 
     @FXML
@@ -116,7 +128,7 @@ public class AfficherOffers implements Initializable{
     }
     
     @FXML
-    void ignorer(ActionEvent event) {
+    private void ignorer(ActionEvent event) {
        int reply=JOptionPane.showConfirmDialog(null, "Are you sure to ignore this offer", "Delete project", JOptionPane.YES_NO_OPTION);
         if(reply==JOptionPane.YES_OPTION){
             OfferJoinCollab o=new OfferJoinCollab();
@@ -127,6 +139,12 @@ public class AfficherOffers implements Initializable{
             ob.clear();
             tableview.setItems(getObservableListeToReload()); 
         }
+    }
+    
+    @FXML
+    void voirdetail(ActionEvent event) {
+        OfferJoinCollab o=tableview.getSelectionModel().getSelectedItem();
+        Popup2.displayOffer(o);        
     }
     
     @Override
@@ -153,6 +171,7 @@ public class AfficherOffers implements Initializable{
         durationO.setCellValueFactory(new PropertyValueFactory("durationO"));
         offerDateO.setCellValueFactory(new PropertyValueFactory("offerDateO"));
         motivationalLetterO.setCellValueFactory(new PropertyValueFactory("motivationalLetterO"));
+        picturePath.setCellValueFactory(new PropertyValueFactory("picturePath"));
         tableview.setItems(ob);
         
        
@@ -181,6 +200,7 @@ public class AfficherOffers implements Initializable{
         durationO.setCellValueFactory(new PropertyValueFactory("durationO"));
         offerDateO.setCellValueFactory(new PropertyValueFactory("offerDateO"));
         motivationalLetterO.setCellValueFactory(new PropertyValueFactory("motivationalLetterO"));
+        picturePath.setCellValueFactory(new PropertyValueFactory("picturePath"));
         return ob;
     }
 

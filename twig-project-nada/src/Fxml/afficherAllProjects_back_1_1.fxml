@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.paint.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.afficherAllProjects_back">
+   <children>
+      <TableView fx:id="tableview" layoutX="41.0" layoutY="66.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="716.0" stylesheets="@newstyle.css">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="36.0" text="id" visible="false" />
+          <TableColumn fx:id="status" text="State" />
+            <TableColumn fx:id="title" prefWidth="110.0" text="Project Title" />
+            <TableColumn fx:id="description" minWidth="0.0" prefWidth="125.0" text="Project Description" />
+            <TableColumn fx:id="category" minWidth="0.0" text="Category" />
+            <TableColumn fx:id="location" text="Location" />
+            <TableColumn fx:id="creationDate" prefWidth="100.0" text="Creation Date" />
+            <TableColumn fx:id="terminationDate" prefWidth="110.0" text="Termination Date" />
+            <TableColumn fx:id="idT" prefWidth="73.0" text="idT" visible="false" />
+            <TableColumn fx:id="titleT" text="Task Title" />
+            <TableColumn fx:id="descriptionT" prefWidth="110.0" text="Task Description " />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <contextMenu>
+            <ContextMenu style="-fx-background-color: #66ACAE; -fx-background-radius: 10,10,10,10; -fx-pref-width: 50;">
+              <items>
+                <MenuItem fx:id="txtupdate" mnemonicParsing="false" onAction="#updateCell" text="Update" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Button fx:id="delete" layoutX="691.0" layoutY="518.0" mnemonicParsing="false" onAction="#supprimer" style="-fx-background-radius: 10,10,10,10; -fx-background-color: #66ACAE; -fx-pref-width: 100px;" text="Delete" />
+      <Label layoutX="14.0" layoutY="7.0" prefHeight="36.0" prefWidth="440.0" text="Projects and their Tasks" textFill="RED">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
+      <HBox layoutX="6.0" layoutY="502.0" prefHeight="25.0" prefWidth="78.0">
+         <children>
+            <MenuBar fx:id="fileMenu" prefHeight="1.0" prefWidth="79.0" style="-fx-background-radius: 10,10,10,10; -fx-background-color: yellow;">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+      <TextField fx:id="filterInput" layoutX="628.0" layoutY="29.0" prefHeight="25.0" prefWidth="130.0" promptText="            By Title" />
+      <Button fx:id="search" layoutX="558.0" layoutY="31.0" mnemonicParsing="false" onAction="#rechercher" style="-fx-background-radius: 10,10,10,10; -fx-background-color: #66ACAE;" text="Search" />
+   </children>
+</Pane>

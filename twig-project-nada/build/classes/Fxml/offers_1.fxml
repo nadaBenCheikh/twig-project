@@ -35,25 +35,24 @@
             <TableColumn fx:id="durationO" prefWidth="90.0" text="Duration" />
             <TableColumn fx:id="offerDateO" prefWidth="100.0" text="Offer Date" />
             <TableColumn fx:id="motivationalLetterO" prefWidth="120.0" text="Motivational Letter" />
+            <TableColumn fx:id="picturePath" prefWidth="120.0" text="Picture Path" visible="false" />
         </columns>
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="txtDetail" mnemonicParsing="false" onAction="#voirdetail" style="-fx-background-radius: 10,10,10,10; -fx-background-color: #C60030; -fx-pref-width: 100px;" text="View Details" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
       </TableView>
       <Button fx:id="confirm" layoutX="691.0" layoutY="518.0" mnemonicParsing="false" onAction="#confirmer" style="-fx-background-radius: 10,10,10,10; -fx-background-color: #66ACAE; -fx-pref-width: 100px;" text="Confirm" />
-      <Label layoutX="43.0" layoutY="7.0" prefHeight="36.0" prefWidth="552.0" text="Offers">
+      <Label layoutX="43.0" layoutY="7.0" prefHeight="36.0" prefWidth="552.0" text="Offers" textFill="RED">
          <font>
             <Font name="Britannic Bold" size="36.0" />
          </font>
-         <textFill>
-            <RadialGradient centerX="0.5111111111111112" centerY="0.4428571428571428" radius="0.5">
-               <stops>
-                  <Stop color="WHITE" />
-                  <Stop color="WHITE" offset="0.007662835249042145" />
-                  <Stop color="#264672" offset="1.0" />
-               </stops>
-            </RadialGradient>
-         </textFill>
       </Label>
       <Button fx:id="ignore" layoutX="582.0" layoutY="518.0" mnemonicParsing="false" onAction="#ignorer" style="-fx-background-radius: 10,10,10,10; -fx-background-color: #C60030; -fx-pref-width: 100px;" text="Ignore" />
    </children>

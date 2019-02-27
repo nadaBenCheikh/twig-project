@@ -78,14 +78,14 @@ public class OffersService implements Iservices<Offers>{
     
     //en tant que donneur d'ordre je veux consulter les offres des freelancer qui ont postulé pour les projets et leurs taches sachant que le freelancer est referencé a la table user
     public List<OfferJoinCollab> displayOffer(int x){
-        String requete="SELECT o.id,p.id,p.title,p.terminationDate,p.category,t.id,t.title,u.firstName,u.lastName,u.email,f.id,f.languages,f.minHourlyFee,f.maxHourlyFee,f.cvLink,o.bid,o.duration,o.offerDate,o.motivationalLetter from tasks t right join projects p on t.projectId=p.id inner join offers o on o.projectId=p.id INNER join freelancer f on o.freelancerId=f.id inner join users u on f.userId=u.id where p.ownerId=?";
+        String requete="SELECT o.id,p.id,p.title,p.terminationDate,p.category,t.id,t.title,u.firstName,u.lastName,u.email,f.id,f.languages,f.minHourlyFee,f.maxHourlyFee,f.cvLink,o.bid,o.duration,o.offerDate,o.motivationalLetter,u.picturePath from tasks t right join projects p on t.projectId=p.id inner join offers o on o.projectId=p.id INNER join freelancer f on o.freelancerId=f.id inner join users u on f.userId=u.id where p.ownerId=?";
         List<OfferJoinCollab> list=new ArrayList<>();
         try {
             pst=connexion.getCnx().prepareStatement(requete);
             pst.setInt(1, x);
             rst=pst.executeQuery();
             while(rst.next()){
-                list.add(new OfferJoinCollab(rst.getInt(1),rst.getInt(2),rst.getString(3),rst.getDate(4),rst.getString(5),rst.getInt(6),rst.getString(7),rst.getString(8),rst.getString(9),rst.getString(10),rst.getInt(11),rst.getString(12),rst.getInt(13),rst.getInt(14),rst.getString(15),rst.getInt(16),rst.getInt(17),rst.getDate(18),rst.getString(19)));
+                list.add(new OfferJoinCollab(rst.getInt(1),rst.getInt(2),rst.getString(3),rst.getDate(4),rst.getString(5),rst.getInt(6),rst.getString(7),rst.getString(8),rst.getString(9),rst.getString(10),rst.getInt(11),rst.getString(12),rst.getInt(13),rst.getInt(14),rst.getString(15),rst.getInt(16),rst.getInt(17),rst.getDate(18),rst.getString(19),rst.getString(20)));
             }
         } catch (SQLException ex) {
             Logger.getLogger(OffersService.class.getName()).log(Level.SEVERE, null, ex);

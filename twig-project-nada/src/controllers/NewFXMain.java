@@ -25,7 +25,7 @@ public class NewFXMain extends Application {
     public void start(Stage primaryStage) throws IOException {
       
          
-        Parent root= FXMLLoader.load(getClass().getResource("../Fxml/afficherAllProjects_back_1.fxml"));    
+        Parent root= FXMLLoader.load(getClass().getResource("../Fxml/offers_1.fxml"));    
         
         Scene scene = new Scene(root);
         primaryStage.setTitle("Hello World!");

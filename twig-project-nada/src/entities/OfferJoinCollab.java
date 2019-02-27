@@ -31,11 +31,12 @@ public class OfferJoinCollab {
     private int durationO;
     private Date offerDateO;
     private String motivationalLetterO;
+    private String picturePath;
 
     public OfferJoinCollab() {
     }
 
-    public OfferJoinCollab(int id, int projectId, String titleP, Date terminationDateP, String categoryP, int taskId, String titleT, String firstName, String lastName, String email, int freelancerId, String languagesF, int minHourlyFeeF, int maxHourlyFeeF, String cvLinkF, int bidO, int durationO, Date offerDateO, String motivationalLetterO) {
+    public OfferJoinCollab(int id, int projectId, String titleP, Date terminationDateP, String categoryP, int taskId, String titleT, String firstName, String lastName, String email, int freelancerId, String languagesF, int minHourlyFeeF, int maxHourlyFeeF, String cvLinkF, int bidO, int durationO, Date offerDateO, String motivationalLetterO, String picturePath) {
         this.id = id;
         this.projectId = projectId;
         this.titleP = titleP;
@@ -55,6 +56,7 @@ public class OfferJoinCollab {
         this.durationO = durationO;
         this.offerDateO = offerDateO;
         this.motivationalLetterO = motivationalLetterO;
+        this.picturePath= picturePath;
     }
     
     public int getId() {
@@ -209,9 +211,18 @@ public class OfferJoinCollab {
         this.motivationalLetterO = motivationalLetterO;
     }
 
+    public String getPicturePath() {
+        return picturePath;
+    }
+
+    public void setPicturePath(String picturePath) {
+        this.picturePath = picturePath;
+    }
+
     @Override
     public String toString() {
-        return "OfferJoinCollab{" + "id=" + id + ", projectId=" + projectId + ", titleP=" + titleP + ", terminationDateP=" + terminationDateP + ", categoryP=" + categoryP + ", taskId=" + taskId + ", titleT=" + titleT + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", freelancerId=" + freelancerId + ", languagesF=" + languagesF + ", minHourlyFeeF=" + minHourlyFeeF + ", maxHourlyFeeF=" + maxHourlyFeeF + ", cvLinkF=" + cvLinkF + ", bidO=" + bidO + ", durationO=" + durationO + ", offerDateO=" + offerDateO + ", motivationalLetterO=" + motivationalLetterO + '}';
+        return "OfferJoinCollab{" + "id=" + id + ", projectId=" + projectId + ", titleP=" + titleP + ", terminationDateP=" + terminationDateP + ", categoryP=" + categoryP + ", taskId=" + taskId + ", titleT=" + titleT + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", freelancerId=" + freelancerId + ", languagesF=" + languagesF + ", minHourlyFeeF=" + minHourlyFeeF + ", maxHourlyFeeF=" + maxHourlyFeeF + ", cvLinkF=" + cvLinkF + ", bidO=" + bidO + ", durationO=" + durationO + ", offerDateO=" + offerDateO + ", motivationalLetterO=" + motivationalLetterO + ", picturePath=" + picturePath + '}';
     }
+
     
 }
