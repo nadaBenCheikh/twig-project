@@ -41,6 +41,10 @@ public class scrumAddController {
 
     private linkControllers previousController;
 
+    private int scrumboardId;
+
+    public void setScrumboardId(int scrumboardId) { this.scrumboardId = scrumboardId; }
+
     public void setPreviousController(linkControllers linkControllers){
         this.previousController = linkControllers;
     }
@@ -49,16 +53,17 @@ public class scrumAddController {
     void addTak(ActionEvent event) {
 
         try {
-            scrumNotes scrumNote = new scrumNotes(title.getText(),description.getText(),new Date().toString(),5);
+            scrumNotes scrumNote = new scrumNotes(title.getText(),description.getText(),new Date().toString(),5,scrumboardId);
             scrumNotesService scrumNotesService = new scrumNotesService();
             scrumNote=scrumNotesService.insert(scrumNote);
             previousController.addscrumBox(scrumNote);
+
             Image whatsAppImg = new Image("https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/whatsapp-128.png");
             TrayNotification tray = new TrayNotification();
             tray.setImage(whatsAppImg);
             tray.setRectangleFill(Paint.valueOf("#2A9A84"));
-            tray.setTitle("yo");
-            tray.setMessage("aha");
+            tray.setTitle("sucess");
+            tray.setMessage("Ajout avec succes");
             tray.showAndDismiss(Duration.seconds(2));
             Stage stage = (Stage) cancelButton.getScene().getWindow();
             stage.close();

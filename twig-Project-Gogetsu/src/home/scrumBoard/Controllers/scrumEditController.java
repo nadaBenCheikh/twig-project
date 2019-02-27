@@ -70,8 +70,8 @@ public class scrumEditController
             TrayNotification tray = new TrayNotification();
             tray.setImage(whatsAppImg);
             tray.setRectangleFill(Paint.valueOf("#2A9A84"));
-            tray.setTitle("yo");
-            tray.setMessage("aha");
+            tray.setTitle("sucess");
+            tray.setMessage("modification avec succes");
             tray.showAndDismiss(Duration.seconds(2));
         }
         Stage stage = (Stage) cancelButton.getScene().getWindow();
@@ -89,8 +89,8 @@ public class scrumEditController
         TrayNotification tray = new TrayNotification();
         tray.setImage(whatsAppImg);
         tray.setRectangleFill(Paint.valueOf("#2A9A84"));
-        tray.setTitle("yo");
-        tray.setMessage("aha");
+        tray.setTitle("sucess");
+        tray.setMessage("Effacement avec succes");
         tray.showAndDismiss(Duration.seconds(2));
 
     }

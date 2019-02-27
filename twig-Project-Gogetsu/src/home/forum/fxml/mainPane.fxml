@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -20,12 +22,13 @@
                </image>
             </ImageView>
             <ChoiceBox layoutX="555.0" layoutY="96.0" prefHeight="25.0" prefWidth="183.0" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
-            <TableView fx:id="tableView" layoutX="34.0" layoutY="145.0" onMouseClicked="#clickItem" prefHeight="385.0" prefWidth="726.0">
+            <TableView fx:id="tableView" layoutX="34.0" layoutY="145.0" onMouseClicked="#clickItem" prefHeight="385.0" prefWidth="753.0">
                <columns>
+                  <TableColumn fx:id="id" prefWidth="149.0" resizable="false" text="id" visible="false" />
                   <TableColumn fx:id="category" prefWidth="89.0" resizable="false" text="category" />
                   <TableColumn fx:id="subject" prefWidth="98.0" resizable="false" text="subject" />
-                  <TableColumn fx:id="description" prefWidth="374.0" resizable="false" text="description" />
-                  <TableColumn fx:id="postedOn" prefWidth="149.0" resizable="false" text="postedOn" />
+                  <TableColumn fx:id="description" prefWidth="438.0" resizable="false" text="description" />
+                  <TableColumn fx:id="postedOn" prefWidth="127.0" resizable="false" text="postedOn" />
                </columns>
             </TableView>
             <Label layoutX="64.0" layoutY="14.0" text="forum subjects  " textFill="#e7e5e5">
@@ -33,6 +36,12 @@
                   <Font size="39.0" />
                </font>
             </Label>
+            <FontAwesomeIcon fill="#ff0404" iconName="PLUS_CIRCLE" layoutX="64.0" layoutY="108.0" size="3em" />
+            <JFXButton fx:id="addPostButton" layoutX="109.0" layoutY="77.0" onAction="#addModal" prefHeight="37.0" prefWidth="103.0" ripplerFill="WHITE" style="-fx-background-color: #FF0404;" text="Add" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
          </children>
       </Pane>
    </children>

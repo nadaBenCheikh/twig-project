@@ -5,11 +5,24 @@ public class CommentsForum {
     private int idUser;
     private String commentaire;
     private String date;
+    private String FullName;
 
-    public CommentsForum(int idUser, String commentaire, String date) {
+    public int getIdPost() {
+        return idPost;
+    }
+
+    public void setIdPost(int idPost) {
+        this.idPost = idPost;
+    }
+
+    private int idPost;
+
+
+    public CommentsForum(int idUser, String commentaire, String date,int idPost) {
         this.idUser = idUser;
         this.commentaire = commentaire;
         this.date = date;
+        this.idPost= idPost;
     }
 
     public CommentsForum(int id, int idUser, String commentaire, String date) {
@@ -17,6 +30,21 @@ public class CommentsForum {
         this.idUser = idUser;
         this.commentaire = commentaire;
         this.date = date;
+    }
+    public CommentsForum(int id,String FullName, String commentaire, String date,int idUser) {
+        this.id = id;
+        this.commentaire = commentaire;
+        this.date = date;
+        this.FullName = FullName;
+        this.idUser=idUser;
+    }
+
+    public String getFullName() {
+        return FullName;
+    }
+
+    public void setFullName(String fullName) {
+        FullName = fullName;
     }
 
     public int getId() {

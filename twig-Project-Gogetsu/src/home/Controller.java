@@ -8,6 +8,7 @@ import home.scrumBoard.Controllers.linkControllers;
 import home.scrumBoard.Controllers.scrumAddController;
 import home.scrumBoard.Controllers.scrumController;
 import home.scrumBoard.Entity.scrumNotes;
+import home.utils.UserInstance;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +16,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -52,15 +55,20 @@ public class Controller implements Initializable {
 
     @FXML
     private Pane pnlMenus;
+
+    @FXML
+    private Label myName;
+
+    @FXML
+    private ImageView myImage;
     private int id ;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
             Client myClient = Client.getInstance() ;
-            Random rand = new Random();
-            id = rand.nextInt(50);
-            myClient.sendMsg("first communication",id);
+            id =UserInstance.getUser1().getId();
+            myClient.sendMsg("first communication", id);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -73,6 +81,8 @@ public class Controller implements Initializable {
         }
         mainPaneController controller = fxmlLoader.<mainPaneController>getController();
         controller.setId(id);
+        myName.setText(UserInstance.getUser1().getFirstName()+" "+UserInstance.getUser1().getLastName());
+        myImage.setImage(new Image(getClass().getResourceAsStream(UserInstance.getUser1().getPicturePath())));
         pnlOverview.toFront();
 
     }

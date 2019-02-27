@@ -20,7 +20,7 @@
    <children>
       <HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="136.0" prefWidth="659.0" spacing="20.0" style="-fx-background-color: #02030A; -fx-background-radius: 5; -fx-background-insets: 0; -fx-border-color: red;">
          <children>
-            <ImageView fx:id="picture2" fitHeight="82.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="myPicture" fitHeight="82.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../image/avatar/01.jpg" />
                </image>

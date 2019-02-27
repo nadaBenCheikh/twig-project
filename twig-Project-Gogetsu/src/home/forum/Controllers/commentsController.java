@@ -2,6 +2,7 @@ package home.forum.Controllers;
 
 import home.forum.Service.PostsCommentsService;
 import home.forum.entity.CommentsForum;
+import home.utils.UserInstance;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -29,7 +30,6 @@ public class commentsController {
 
     @FXML
     private ImageView picture;
-
     @FXML
     private TextField textTosend;
 
@@ -43,23 +43,40 @@ public class commentsController {
     private Button send;
 
     @FXML
-    private ImageView picture2;
+    private ImageView myPicture;
+
+    @FXML
+    private Button delete;
+
+    @FXML
+    private HBox pane;
 
     private linkForumController linkForumController;
+    private int id;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public void setLinkForumController(linkForumController linkForumController) {
         this.linkForumController = linkForumController;
     }
-
+    void enableDelete(){
+        delete.setDisable(false);
+    }
     @FXML
     void sendButton(ActionEvent event) {
-        System.out.println(textTosend.getText()); //sajil fil comments DB
-        PostsCommentsService postsCommentsService = new PostsCommentsService();
-        CommentsForum commentsForum = new CommentsForum(5,textTosend.getText(),new Date().toString());
-        //postsCommentsService.insert(commentsForum);
-        linkForumController.addCommentToUi(textTosend.getText(),"gog",new Date().toString());
+        linkForumController.addCommentToUi(textTosend.getText(), UserInstance.getUser1().getFirstName()+" "+UserInstance.getUser1().getLastName(),new Date().toString());
         textTosend.clear();
-
+    }
+    @FXML
+    void deleteMethod(ActionEvent event) {
+            PostsCommentsService postsCommentsService = new PostsCommentsService();
+            postsCommentsService.delete(id);
+            pane.getChildren().clear();
     }
 
     public String getName() {
@@ -92,6 +109,14 @@ public class commentsController {
 
     public void setPicture(Image picture) {
         this.picture.setImage(picture);
+    }
+
+    public ImageView getMyPicture() {
+        return myPicture;
+    }
+
+    public void setMyPicture(Image  myPicture) {
+        this.myPicture.setImage(myPicture);
     }
 
 }
