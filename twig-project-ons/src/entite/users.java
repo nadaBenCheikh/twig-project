@@ -30,6 +30,20 @@ public class users {
         this.id = id;
     }
 
+    public users(int id, String firstName, String lastName, String email, String password, String role, int phone, String region, String description, String picturePath) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+        this.phone = phone;
+        this.region = region;
+        this.description = description;
+        this.picturePath = picturePath;
+    }
+    
+
     public users(String firstName, String lastName, String email, String password, String role, int phone, String region, String description, String picturePath) {
         this.firstName = firstName;
         this.lastName = lastName;

@@ -6,6 +6,7 @@
 package service;
 
 import entite.Freelancer;
+import entite.jointure;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -84,12 +85,28 @@ public class FreelancerService implements IService<Freelancer> {
     @Override
     public List<Freelancer> displayAll() {
        List<Freelancer> list=new ArrayList<>();
-       String requete="select * from freelancer";
+       String requete="select * from freelancer ";
         try {
             ste=connexion.getCnx().createStatement();
              rs=ste.executeQuery(requete);
                while(rs.next()){
                list.add (new Freelancer (rs.getInt(1),rs.getInt(2), rs.getString(3), rs.getInt(4),rs.getInt(5),rs.getString(6),rs.getInt(7),rs.getString(8)));
+               }   
+        } catch (SQLException ex) {
+            Logger.getLogger(FreelancerService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+          return list;
+    }
+  
+    public List<jointure> display() {
+       List<jointure> list=new ArrayList<>();
+       String requete="select Freelancer.*, users.* from Freelancer inner join users on users.id=Freelancer.userId ";
+        try {
+            ste=connexion.getCnx().createStatement();
+             rs=ste.executeQuery(requete);
+               while(rs.next()){
+               list.add (new jointure (rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getInt(7),rs.getInt(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getInt(12),
+                       rs.getInt(13), rs.getString(14), rs.getInt(15),rs.getInt(16),rs.getString(17),rs.getInt(18),rs.getString(19)));
                }   
         } catch (SQLException ex) {
             Logger.getLogger(FreelancerService.class.getName()).log(Level.SEVERE, null, ex);
@@ -115,7 +132,23 @@ public class FreelancerService implements IService<Freelancer> {
         return f1;
     }
       
-    
+    public Freelancer getByIdFreelancer(int x) {
+        String requete="select * from freelancer where userId=?";
+        Freelancer f1= new Freelancer();
+        try {
+            pst=connexion.getCnx().prepareStatement(requete);
+             pst.setInt(1,x);
+             rs=pst.executeQuery();
+              while(rs.next()){
+               f1=new Freelancer (rs.getInt(1),rs.getInt(2),rs.getString(3), rs.getInt(4),rs.getInt(5),rs.getString(6),rs.getInt(7),rs.getString(8));
+               }   
+             
+        } catch (SQLException ex) {
+            Logger.getLogger(FreelancerService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return f1;
+    }
+      
    
     
     

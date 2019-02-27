@@ -24,11 +24,12 @@ public class inscriptionController {
    
     @FXML
     void inscriredonneur(ActionEvent event) throws IOException {
-             Stage primaryStage=new Stage();
- Parent root= FXMLLoader.load(getClass().getResource("../Fxml/mainPane_2.fxml"));
+      
+        Stage primaryStage=new Stage();
+        Parent root= FXMLLoader.load(getClass().getResource("../Fxml/ajouterdon_1.fxml"));
         Scene scene = new Scene(root);
    
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("Sign up Project Owner");
         
         
         primaryStage.setScene(scene);
@@ -37,11 +38,11 @@ public class inscriptionController {
 
     @FXML
     void inscrirefreelancer(ActionEvent event) throws IOException {
-             Stage primaryStage=new Stage();
- Parent root= FXMLLoader.load(getClass().getResource("../Fxml/mainPane_2_1.fxml"));
+        Stage primaryStage=new Stage();
+        Parent root= FXMLLoader.load(getClass().getResource("../Fxml/ajouterf_1_1.fxml"));
         Scene scene = new Scene(root);
    
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("Sign up Freelancer");
         
         
         primaryStage.setScene(scene);

@@ -21,7 +21,7 @@ import project.database;
  * @author esprit
  */
 public class UserServices implements IService<users>{
-    private database connexion;
+    private final database connexion;
     private PreparedStatement pst; 
     private ResultSet rs; 
     private Statement ste;
@@ -129,15 +129,47 @@ public class UserServices implements IService<users>{
         }
         return u1;
     }
-/*public void login(users u) {
-       String sql="Select * from users where email=?,password=?";
+   
+
+    public users getByEmail(String mail) {
+        String requete="select * from users where email=?";
+        users u1= new users();
+        //Boolean x =false;
         try {
-            pst = connexion.getCnx().prepareStatement(requete);
-             pst.setString(1,u.getEmail());
-             pst.setString(1,u.getPassword());
-             pst.executeUpdate();    
+            pst=connexion.getCnx().prepareStatement(requete);
+            pst.setString(1,mail);
+            rs=pst.executeQuery();
+            while(rs.next()){
+                u1= new users(rs.getInt(1), rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5), rs.getString(6),rs.getInt(7),rs.getInt(8), rs.getString(9),rs.getString(10),rs.getString(11),rs.getInt(12));
+                //x = true; 
+              }
         } catch (SQLException ex) {
             Logger.getLogger(UserServices.class.getName()).log(Level.SEVERE, null, ex);
         }
-}*/
+        return u1;
+        
+    }
+    
+    public void updatepassword(String password, String mail) {
+        String requete="UPDATE `users` SET `password`=? WHERE `email`=?";
+        try {
+            pst=connexion.getCnx().prepareStatement(requete);
+            pst.setString(1, password);
+            pst.setString(2, mail);
+            pst.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(UserServices.class.getName()).log(Level.SEVERE, null, ex);
+        }          
+    }
+    
+    public void updatestate(String mail) {
+        String requete="UPDATE `users` SET `state`=0 WHERE `email`=?";
+        try {
+            pst=connexion.getCnx().prepareStatement(requete);
+            pst.setString(1, mail);
+            pst.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(UserServices.class.getName()).log(Level.SEVERE, null, ex);
+        }          
+    }
 }
