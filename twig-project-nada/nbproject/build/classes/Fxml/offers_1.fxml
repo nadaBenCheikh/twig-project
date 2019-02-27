@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="950.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherOffers">
+   <children>
+      <TableView fx:id="tableview" layoutX="42.0" layoutY="57.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="878.0" stylesheets="@newstyle.css">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="36.0" text="id" visible="false" />
+          <TableColumn fx:id="projectId" text="projectId" visible="false" />
+            <TableColumn fx:id="titleP" prefWidth="110.0" text="Project Title" />
+            <TableColumn fx:id="terminationDateP" minWidth="0.0" prefWidth="150.0" text="Project termination date" />
+            <TableColumn fx:id="categoryP" minWidth="0.0" text="Category" />
+            <TableColumn fx:id="taskId" text="taskId" visible="false" />
+            <TableColumn fx:id="titleT" prefWidth="100.0" text="Titke task" />
+            <TableColumn fx:id="firstName" prefWidth="94.0" text="First Name" />
+            <TableColumn fx:id="lastName" prefWidth="89.0" text="Last Name" />
+            <TableColumn fx:id="email" text="Email" />
+            <TableColumn fx:id="freelancerId" prefWidth="110.0" text="freelancerId" visible="false" />
+            <TableColumn fx:id="languagesF" text="Languages" />
+            <TableColumn fx:id="minHourlyFeeF" prefWidth="90.0" text="MinHourlyFee" />
+            <TableColumn fx:id="maxHourlyFeeF" prefWidth="90.0" text="MaxHourlyFee" />
+            <TableColumn fx:id="cvLinkF" prefWidth="90.0" text="CV Link" />
+            <TableColumn fx:id="bidO" text="Bid" />
+            <TableColumn fx:id="durationO" prefWidth="90.0" text="Duration" />
+            <TableColumn fx:id="offerDateO" prefWidth="100.0" text="Offer Date" />
+            <TableColumn fx:id="motivationalLetterO" prefWidth="120.0" text="Motivational Letter" />
+            <TableColumn fx:id="picturePath" prefWidth="120.0" text="Picture Path" visible="false" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="txtDetail" mnemonicParsing="false" onAction="#voirdetail" style="-fx-background-radius: 10,10,10,10; -fx-background-color: #C60030; -fx-pref-width: 100px;" text="View Details" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Button fx:id="confirm" layoutX="691.0" layoutY="518.0" mnemonicParsing="false" onAction="#confirmer" style="-fx-background-radius: 10,10,10,10; -fx-background-color: #66ACAE; -fx-pref-width: 100px;" text="Confirm" />
+      <Label layoutX="43.0" layoutY="7.0" prefHeight="36.0" prefWidth="552.0" text="Offers" textFill="RED">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="ignore" layoutX="582.0" layoutY="518.0" mnemonicParsing="false" onAction="#ignorer" style="-fx-background-radius: 10,10,10,10; -fx-background-color: #C60030; -fx-pref-width: 100px;" text="Ignore" />
+      <Button layoutX="43.0" layoutY="506.0" mnemonicParsing="false" onAction="#notiiiif" text="Button" />
+   </children>
+</Pane>

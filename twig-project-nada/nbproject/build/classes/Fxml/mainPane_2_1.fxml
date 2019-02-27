@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterProjet">
+   <children>
+      <Button fx:id="ajouter" layoutX="398.0" layoutY="450.0" mnemonicParsing="false" onAction="#add" prefHeight="8.0" prefWidth="131.0" style="-fx-background-radius: 10,10,10,10; -fx-background-color: #66ACAE; -fx-pref-width: 100;" text="Add" textAlignment="CENTER" textFill="#232324" textOverrun="CLIP" />
+      <Label layoutX="150.0" layoutY="180.0" prefHeight="36.0" prefWidth="94.0" text="Title">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.47777777777777775" centerY="0.42857142857142855" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="0.007662835249042145" />
+                  <Stop color="#1d90dd" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Label layoutX="150.0" layoutY="220.0" text="Description">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.47777777777777775" centerY="0.42857142857142855" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="0.007662835249042145" />
+                  <Stop color="#1d90dd" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Label layoutX="150.0" layoutY="260.0" text="Location">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.47777777777777775" centerY="0.42857142857142855" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="0.007662835249042145" />
+                  <Stop color="#1d90dd" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Label layoutX="150.0" layoutY="300.0" text="Category">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.47777777777777775" centerY="0.42857142857142855" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="0.007662835249042145" />
+                  <Stop color="#1d90dd" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Label layoutX="150.0" layoutY="345.0" prefHeight="31.0" prefWidth="300.0" text="Termination Date">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.47777777777777775" centerY="0.42857142857142855" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="0.007662835249042145" />
+                  <Stop color="#1d90dd" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <TextField fx:id="txtTitle" layoutX="287.0" layoutY="180.0" />
+      <DatePicker fx:id="DatePickerTermination" layoutX="320.0" layoutY="345.0" />
+      <TextField fx:id="txtLocation" layoutX="287.0" layoutY="260.0" />
+      <TextField fx:id="txtCategory" layoutX="287.0" layoutY="300.0" />
+      <Label layoutX="59.0" layoutY="56.0" prefHeight="69.0" prefWidth="277.0" text="Create a new Project" textFill="RED">
+         <font>
+            <Font name="Britannic Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtDescription" layoutX="287.0" layoutY="220.0" prefHeight="25.0" prefWidth="149.0" />
+   </children>
+</Pane>

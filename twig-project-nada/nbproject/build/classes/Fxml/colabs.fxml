@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pnlOverview" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherColabs">
+   <children>
+      <TableView fx:id="tableview" layoutX="42.0" layoutY="57.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="750.0" stylesheets="@newstyle.css">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="36.0" text="id" visible="false" />
+          <TableColumn fx:id="idP" text="projectId" visible="false" />
+            <TableColumn fx:id="titleP" prefWidth="110.0" text="Project Title" />
+            <TableColumn fx:id="terminationDtae" minWidth="0.0" prefWidth="150.0" text="Project termination date" />
+            <TableColumn fx:id="idT" text="idT" visible="false" />
+            <TableColumn fx:id="titleT" prefWidth="100.0" text="Title task" />
+            <TableColumn fx:id="firstName" prefWidth="94.0" text="First Name" />
+            <TableColumn fx:id="lastName" prefWidth="89.0" text="Last Name" />
+            <TableColumn fx:id="mail" text="Email" />
+            <TableColumn fx:id="idF" prefWidth="110.0" text="freelancerId" visible="false" />
+            <TableColumn fx:id="languages" text="Languages" />
+            <TableColumn fx:id="state" prefWidth="90.0" text="State" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="jobOffer" mnemonicParsing="false" onAction="#jobOfferMailing" style="-fx-background-color: #66ACAE; -fx-background-radius: 10,10,10,10; -fx-pref-width: 80;" text="Job offer" />
+                  <MenuItem fx:id="firedUp" mnemonicParsing="false" onAction="#firedUpDelete" style="-fx-pref-width: 80; -fx-background-radius: 10,10,10,10; -fx-background-color: #C60030;" text="Fired up" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Button fx:id="delete" layoutX="691.0" layoutY="518.0" mnemonicParsing="false" onAction="#supprimer" style="-fx-background-radius: 10,10,10,10; -fx-background-color: #66ACAE; -fx-pref-width: 100px;" text="Delete" />
+      <Label layoutX="43.0" layoutY="7.0" prefHeight="36.0" prefWidth="552.0" text="Collaboraters">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5111111111111112" centerY="0.4428571428571428" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="0.007662835249042145" />
+                  <Stop color="#264672" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+   </children>
+</Pane>
